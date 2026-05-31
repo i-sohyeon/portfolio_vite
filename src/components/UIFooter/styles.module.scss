@@ -1,0 +1,47 @@
+@use "../../styles/style.scss" as *;
+
+.ui-footer {
+  background: #049713;
+  padding: rem(36) rem(24);
+  .footerWrap {
+  max-width: 1280px;
+  margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iText {
+      display: flex;
+      align-items: center;
+    }
+    nav > ul {
+      display: flex;
+      li {
+        margin-right: rem(16);
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+  .copyText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .ui-footer {
+    max-width: 768px;
+    font-size: 14px;
+    .copyText {
+      display: block;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

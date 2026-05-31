@@ -1,0 +1,148 @@
+@use "../../styles/style.scss" as *;
+
+/***** checklist style *****/ 
+// variant (size = sm)
+.checkList {
+  li {
+    position: relative;
+    margin-top: rem(12);
+    padding-left: rem(24);
+    &:first-child {
+      margin-top: 0;
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../../assets/images/icons/ico-check-blue.png");
+      background-size: rem(16) rem(16);
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+}
+// size
+.ui-textList-md {
+  li {
+    font-size: rem(20) !important;
+    line-height: 1.2;
+    padding-left: rem(32);
+  }
+  & > li {
+      &::before {
+        width: rem(20);
+        height: rem(20);
+        background-size: rem(20) rem(20);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ui-textList-md {
+    li {
+      font-size: rem(16) !important;
+      line-height: 1.2;
+      padding-left: rem(24);
+    }
+    & > li {
+        &::before {
+          width: rem(16);
+          height: rem(16);
+          background-size: rem(16) rem(16);
+      }
+    }
+  }
+}
+
+
+
+
+/***** circleList style *****/ 
+.circleList {
+  li {
+    display: flex;
+    margin-bottom: rem(16);
+    span {
+      display: inline-block;
+      padding: rem(18) rem(8);
+      border-radius: 50%;
+      background-color: #fff302;
+      text-align: center;
+      vertical-align: middle;
+      font-size: rem(16);
+      font-family: "tenada";
+      max-height: 55px;
+      max-width: 55px;
+      box-sizing: border-box;
+      line-height: 1.2;
+    }
+    div {
+      margin-left: rem(28);
+      display: block;
+      max-width: 305px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 2px solid #111;
+      padding: rem(24) rem(20) rem(24) rem(56);
+      border-radius: rem(24);
+      margin-bottom: rem(16);
+      h3 {
+        font-size: rem(16);
+      }
+      p {
+        margin-top: rem(12);
+        font-size: rem(12);
+        color: #666;
+      }
+    }
+    // position: relative;
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   display: inline-block;
+    //   width: 10px;
+    //   height: 10px;
+    //   background-color: yellow;
+    // }
+  }
+}
+
+
+
+.firstLevelList > li {
+  margin-bottom: rem(24);
+  padding-left: rem(24);
+  font-size: rem(16);
+  > span {
+    display: inline-block;
+    color: white;
+    padding-left: 0;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: rem(8);
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: url("../../assets/images/icons/ico-check-wh.png");
+      width: rem(16);
+      height: rem(16);
+      background-size: rem(16) rem(16);
+      position: absolute;
+      top: 0px;
+      left: rem(-24);
+    }
+  }
+}
+
+/* 중첩 리스트 스타일 */
+.nestedList > li {
+  font-size: rem(16);
+  & + li {
+    margin-top: rem(12);
+  }
+  > span {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

@@ -1,0 +1,152 @@
+@use "../../styles/style.scss" as *;
+
+.swiper {
+  overflow: visible !important;
+  &-custom{
+    display: none !important;
+  }
+}
+
+
+// 데스크탑 1280px ~
+.slideItem {
+  width: 750px;
+  padding: rem(30) rem(40);
+  border: 3px solid #111;
+  border-radius: 40px;
+  box-sizing: border-box;
+  background-color: #ccc !important;
+  button {
+    position: relative;
+    padding: 0;
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 28px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      pointer-events: none;
+    }
+    &:hover::before {
+     opacity: 1;
+    }
+    // &:hover > img {
+    //   transform: scale(1.2);
+    // }
+  }
+  img {
+    display: block;
+    width: 650px;
+    height: 380px;
+    background: #eee;
+    border-radius: 28px;
+    object-fit: cover;
+    transition: transform 0.8s ease; 
+  }
+  h3 {
+    font-family: "tenada";
+    font-size: rem(48);
+    // @include fontSize(48px, 500);
+    letter-spacing: rem(-0.8);
+    margin-top: rem(12);
+    & + p {
+      font-family: "tenada";
+      font-size: rem(36);
+    }
+  }
+}
+
+/* 모바일 세로 (0px ~ 320px, 479px) */
+@media (max-width: 479px) {
+  .slideItem {
+    padding: rem(28) rem(16);
+    img {
+      width: 80vw;
+      height: rem(250);
+    }
+    h3 {
+      font-size: rem(30);
+      & + p {
+        font-size: rem(20);
+      }
+    } 
+  }
+}
+
+/* 모바일 가로 & 테블릿 세로 (480px ~ 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .slideItem {
+      padding: rem(28) rem(24);
+      img {
+        width: 78vw;
+        height: rem(340);
+      }
+      h3 {
+        font-size: rem(36);
+        & + p {
+          font-size: rem(24);
+        }
+      } 
+    }
+}
+
+/* 테블릿 가로 (768px ~ 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    .slideItem {
+      img {
+        width: 54vw;
+      }
+      h3 {
+        font-size: rem(40);
+        & + p {
+          font-size: rem(32);
+        }
+      } 
+    }
+    
+  }
+}
+
+
+/* 테블릿 가로 & 노트북 (1024px ~ 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  body {
+    .slideItem {
+      img {
+        width: 54vw;
+      }
+      h3 {
+        font-size: rem(40);
+        & + p {
+          font-size: rem(32);
+        }
+      } 
+    }
+  }
+}
+
+// UISwiper.Box slide bgColor
+.ui-swiper-red {background-color: #E41201 !important;}
+.ui-swiper-yellow {background-color: #FED500 !important;}
+.ui-swiper-gray {background-color: #BEBEBE !important;}
+.ui-swiper-navy {background-color: #106aa6 !important;}
+.ui-swiper-green {background-color: #35B659 !important;}
+.ui-swiper-brown {background-color: #766554 !important;}
+.ui-swiper-yellowgreen {background-color: #BBDA41 !important;}
+
+// UITitleColor
+.ui-title-color-purple {color: #5815A5;}
+.ui-title-color-green {color: #0C5B00;}
+.ui-title-color-black {color: #000000;}
+// .ui-title-color-blue {color: #0067AC;}
+.ui-title-color-yellow {color: #FFC20D;}
+.ui-title-color-white {color: #ffffff;}

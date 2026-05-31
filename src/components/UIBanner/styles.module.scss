@@ -1,0 +1,117 @@
+@use "../../styles/style.scss" as *;
+
+.ui-banner {
+    // 스크롤시에 리스트가 보이게 하는 애니메이션
+    display: flex;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 1s ease, transform 1s ease;
+    margin-bottom: rem(16);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    span {
+      display: inline-block;
+      padding: rem(18) rem(8);
+      border-radius: 50%;
+      background-color: #FFF302;
+      text-align: center;
+      vertical-align: middle;
+      font-size: rem(16);
+      font-family: "tenada";
+      max-height: rem(55);
+      max-width: rem(55);
+      box-sizing: border-box;
+      line-height: 22px;
+    }
+    > div {
+      margin-left: rem(28);
+      display: block;
+      min-width: rem(280);
+      max-width: rem(320);
+      width: 100%;
+      box-sizing: border-box;
+      border: 2px solid #111;
+      padding: rem(24) rem(24) rem(24) rem(72);
+      border-radius: rem(24);
+      margin-bottom: rem(16);
+      text-align: left;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      h3 {
+        font-size: rem(16);
+        margin-bottom: rem(12);
+        word-break: keep-all;
+      }
+      p {
+        font-size: rem(12);
+        color: #666;
+      }
+    }
+
+  &-type1{
+    > div {background-color: #BEBADA;}
+  }
+  &-type2 > div {background-color: #8ED3C7;}
+  &-type3 > div {background-color: #FB8072;}
+  &-type4 > div {background-color: #FDB462;}
+  &-type5 > div {background-color: #BDEF73;}
+  &-type6 > div {background-color: #7FB1D3;}
+
+  &-study div i {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: rem(-52);
+      background-image: url('../../assets/images/icons/ico-study.png');
+      width: rem(36);
+      height: rem(36);
+      display: inline-block;
+      background-size: rem(36) rem(36);
+      background-repeat: no-repeat;
+    }
+  }
+  &-company div i {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: rem(-52);
+      background-image: url('../../assets/images/icons/ico-company.png');
+      width: rem(36);
+      height: rem(36);
+      display: inline-block;
+      background-size: rem(36) rem(36);
+      background-repeat: no-repeat;
+    }
+  }
+  &-center{
+    justify-content: center;
+  }
+  
+  // align
+  &-left {text-align: left;}
+  &-center {text-align: center;}
+  &-right {text-align: right;}
+}
+
+
+/***** 반응형 *****/ 
+@media (max-width: 767px) {
+  .ui-banner {
+    justify-content: center;
+    & > div {
+      max-width: rem(500);
+    }
+  }
+}
+
+/* show 클래스가 붙으면 보이도록 애니메이션 */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

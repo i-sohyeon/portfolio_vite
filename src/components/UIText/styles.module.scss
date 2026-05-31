@@ -1,0 +1,162 @@
+@use "../../styles/style.scss" as *;
+
+/**** UIText ****/
+.ui-text {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-family: "Pretendard";
+
+  // font
+  &-tenada {font-family: "Tenada";}
+  &-bagel {font-family: "Bagel fat one";}
+
+  /* Variants */
+  &-mainTitle {
+    font-family: "Tenada"; 
+    font-size: rem(80) !important;
+  }
+  
+  &-contentTitle {
+    display: inline-block;
+    font-family: "Tenada";
+    font-size: rem(60) !important;
+    margin: 0 0 rem(48) 0;
+  }
+
+  /* Sizes */
+  &-xxs {font-size: rem(12);}
+  &-xs {font-size: rem(16);}
+  &-sm {font-size: rem(20)}
+  &-md {font-size: rem(24);}
+  &-lg {font-size: rem(28)}
+  &-xl {font-size: rem(32);}
+  &-xxl {font-size: rem(36)}
+
+  /* opacity */
+  &-10 {opacity: 10%;}
+  &-20 {opacity: 20%;}
+  &-30 {opacity: 30%;}
+  &-40 {opacity: 40%;}
+  &-50 {opacity: 50%;}
+  &-60 {opacity: 60%;}
+  &-70 {opacity: 70%;}
+  &-80 {opacity: 80%;}
+
+  /* Weights */
+  &-normal {font-weight: 400;}
+  &-medium {font-weight: 500;}
+  &-bold {font-weight: 700;}
+
+  /* align */
+  &-left {text-align: left;}
+  &-center {text-align: center;}
+  &-right {text-align: right;}
+
+  /* display */
+  &-block {display: block;}
+  &-inline {display: inline;}
+  &-inline {display: inline;}
+}
+
+
+/**** UIText.Header ****/
+.ui-text-header {
+  font-family: "Tenada";
+
+  // size
+  &-xl { font-size: rem(80);}
+  &-lg { 
+    font-size: rem(60);
+    margin-bottom: rem(48);
+  }
+  &-md {
+    font-size: rem(48);
+    margin-bottom: rem(24);
+  }
+
+  // color
+  &-white {
+    color: #fff;
+  }
+
+  /*** a 링크 태그 스타일 ***/ 
+  .headerLink {
+    color: red;
+  }
+  &:has(a) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    position: relative;
+    padding-right: rem(32);
+    font-size: rem(20);
+    word-break: keep-all;
+    text-align: right;
+    transition: .5s;
+    &:hover {margin-top: rem(-12);}
+
+    &::after {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: rem(-1);
+      background-image: url(../../assets/images/icons/ico-arrow-r.png);
+      width: rem(20);
+      height: rem(20);
+      background-size: rem(20) rem(20);
+    }
+  }
+}
+
+
+// color
+.ui-text-white, .ui-text-header-white {color: #fff;}
+.ui-text-blue, .ui-text-header-blue {color: #3e8ae3;}
+
+.linkTo {font-size: rem(20);}
+
+@media (max-width: 767px) {
+  .ui-text {
+    /* Variants */
+    &-mainTitle {
+      font-family: "Tenada";
+      font-size: rem(48) !important;
+    }
+    &-contentTitle {
+      display: inline-block;
+      font-family: "Tenada";
+      font-size: rem(36) !important;
+      margin: 0 0 48px 0;
+    }
+    &-header {
+      &-sm {font-size: rem(24);}
+      &-md {
+        font-size: rem(28);
+        margin-bottom: rem(20);
+        &+.ui-text-header-md:first-child{margin-bottom: 0;}
+      }
+      &-lg {
+        font-size: rem(32);
+      }
+      &-xl {
+        font-size: rem(44);
+      }
+    }
+    
+    /* Sizes */
+    &-xxs {font-size: rem(11);}
+    &-xs {font-size: rem(14);}
+    &-sm {font-size: rem(16);}
+    &-md {font-size: rem(20);}
+    &-lg {font-size: rem(24);}
+    &-xl {font-size: rem(28);}
+    &-xxl {font-size: rem(32);}
+  }
+
+}
+

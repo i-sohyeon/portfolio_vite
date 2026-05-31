@@ -1,0 +1,68 @@
+@use "../../styles/style.scss" as *;
+
+.ui-table {
+  // margin-top: 20px;
+  caption {display: none;}
+  &-md {
+    font-size: rem(20);
+    th {min-width: rem(120);}
+    th, td {padding: rem(6) 0;}
+    td {padding-left: rem(32)}
+  }
+
+  // align
+  &-left {text-align: left;}
+  &-center {text-align: center;}
+  &-right {text-align: right;}
+
+  td {
+    a {
+      position: relative;
+      transition: color 0.3s ease;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: rem(2);
+        bottom: 0;
+        left: 0;
+        background-color: #007bff;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+      }
+      &:hover {
+        color: #0056b3;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+    
+
+    
+  
+    
+ 
+  }
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .ui-table {
+    &-md {
+      font-size: rem(16);
+      th {min-width: rem(88);}
+      th, td {padding: rem(4) rem(0);}
+      td {
+        padding-left: rem(12);
+      }
+    }
+  }
+}
+

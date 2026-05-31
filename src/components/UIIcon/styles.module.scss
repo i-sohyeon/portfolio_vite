@@ -1,0 +1,52 @@
+.ui-icon {
+  display: inline-block;
+
+  /** variant **/
+  &-github {
+    background-image: url("../../assets/images/icons/ico_github.png");
+    background-size: 100% 100%;
+  }
+  &-github-wht {
+    background-image: url("../../assets/images/icons/ico_github_wht.png");
+    background-size: 100% 100%;
+  }
+  &-tistory {
+    background-image: url("../../assets/images/icons/ico_tistory.png");
+    background-size: 100% 100%;
+  }
+  &-tistory-wht {
+    background-image: url("../../assets/images/icons/ico_tistory_wht.png");
+    background-size: 100% 100%;
+  }
+  &-codepen {
+    background-image: url("../../assets/images/icons/ico_codepen.png");
+    background-size: 100% 100%;
+  }
+  &-mail {
+    background-image: url("../../assets/images/icons/ico-mail.png");
+    background-size: 100% 100%;
+  }
+  &-arrow-down {
+    background-image: url("../../assets/images/icons/ico_arrow_bk.png");
+    background-size: 100% 100%;
+  }
+
+  /** size **/
+  &-sm {
+    width: 20px;
+    height: 20px;
+  }
+  &-md {
+    width: 24px;
+    height: 24px;
+  }
+  &-lg {
+    width: 36px;
+    height: 36px;
+  }
+
+  /** color **/ 
+  &-wht {
+    // background: red;
+  }
+}

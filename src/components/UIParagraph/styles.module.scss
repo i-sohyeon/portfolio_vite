@@ -1,0 +1,28 @@
+@use "../../styles/style.scss" as *;
+
+.paragraph {
+  color: #fff;
+  &-title {
+    font-size: rem(24);
+    font-weight: 700;
+    display: inline;
+    margin-right: rem(4);
+  }
+  
+  &-period {
+    font-size: rem(12);
+    opacity: 0.5;
+  }
+  &-subtitle {
+    font-size: rem(20);
+    font-weight: 700;
+    margin-top: rem(8);
+  }
+  &-desc {
+    font-size: rem(20);
+    font-weight: 500;
+    margin-top: rem(8);
+    opacity: 0.8;
+  }
+}
+

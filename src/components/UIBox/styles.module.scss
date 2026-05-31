@@ -1,0 +1,117 @@
+@use "../../styles/utils/function" as *;
+
+.ui-box {
+  &-article{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0px auto;
+    padding: rem(120) 0;
+  }
+
+  // align
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center !important;
+  }
+  &-right {
+    text-align: right;
+  }
+
+  // jContent
+  &-space-between {
+    justify-content: space-between;
+  }
+
+  // aItems
+  &-top {
+    align-items: start;
+  }
+  &-middle {
+    align-items: center;
+  }
+  &-bottom {
+    align-items: end;
+  }
+
+  // variant
+  &-card {
+    height: fit-content;
+    background: #FFF302;
+    border-radius: rem(24);
+    display: inline-block; 
+    width: 100%;
+    max-width: 550px;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    text-align:left;
+  }
+  // display
+  &-flex {display: flex;}
+  &-grid {display: grid;}
+}
+
+// .ui-box-div {
+//   & > div {background: red;}
+// }
+
+
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+// scroll
+.previewBox {
+  width: 100%;
+  height: 300px;
+  // margin-right: rem(32);
+  padding: rem(8);
+  box-sizing: border-box;
+  background-color: #111111;
+  overflow: hidden;
+  border-radius: rem(8);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  &:hover img{
+    overflow-y: scroll;
+    transform: translateY(-50%);
+    transition: 5s;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+/***** 반응형 *****/ 
+
+// display
+@media (min-width: 320px) and (max-width: 767px) {
+  .ui-box {
+    &-article {
+      padding: rem(100) 0;
+    }
+    &-div {
+    }
+    &-flex, &-grid {
+      display: block;
+    }
+    &-card {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .previewBox {
+    margin-top: rem(32);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .ui-box-flex {
+    display: flex;
+  }
+
+}

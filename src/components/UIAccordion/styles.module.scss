@@ -1,0 +1,71 @@
+@use "../../styles/style.scss" as *;
+
+.ui-acc {
+  &-line {
+    button {
+      font-size: rem(20);
+      font-weight: 400;
+      color: #111111;
+      text-align: left;
+    }
+  }
+}
+
+.accordion {
+  button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: rem(24) rem(12);
+    background: none;
+    i {width: rem(20);height: rem(20);}
+    &[aria-expanded="true"] {
+      font-weight: 700;
+      i {transform: rotate(180deg);}
+    }
+
+    &[aria-expanded="true"] + &-panel {
+      max-height: 300px;     // 펼쳐질 최대 높이
+      opacity: 1;
+      padding: 16px 0;
+      background: #111111;
+    }
+  
+  }
+  > div {
+    background: rgba(256,256,256,0.2);
+    padding: rem(32);
+    // text-align: center;
+    img {width: 80%;}
+  }
+
+  &-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+    transition: 
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    padding 0.3s ease;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .accordion {
+    button {
+      padding: rem(16) 0;
+      background: none;
+    }
+    > div {
+      background: rgba(256,256,256,0.2);
+      padding: rem(16);
+      img{width: 100%;}
+    }
+  }
+}
+
+

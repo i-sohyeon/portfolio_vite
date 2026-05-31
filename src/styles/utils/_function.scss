@@ -1,0 +1,51 @@
+@use "sass:math";
+@use "sass:list";
+
+// sample
+@function lighten($color, $amount) {
+  @return lighten($color, $amount);
+}
+
+@function rem($px) {
+  @return #{math.div($px, 16)}rem;
+
+}
+
+// px to rem
+// @function rem($px) {
+//   @return ($px / 16) + rem;
+// }
+
+// helper class 4배수로 제작
+
+/** margin **/
+$margin-sizes: rem(0), rem(4), rem(8), rem(12), rem(16), rem(20), rem(24), rem(28), rem(32), rem(36), rem(40), rem(44), rem(48), rem(52), rem(56), rem(60);
+
+@each $size in $margin-sizes {
+  $i: list.index($margin-sizes, $size);
+
+  .mt-#{$i} { margin-top: $size !important; }
+  .mb-#{$i} { margin-bottom: $size !important; }
+  .ml-#{$i} { margin-left: $size !important; }
+  .mr-#{$i} { margin-right: $size !important; }
+}
+
+/** padding **/
+$padding-sizes: rem(0), rem(4), rem(8), rem(12), rem(16), rem(20), rem(24), rem(28), rem(32), rem(36), rem(40), rem(44), rem(48), rem(52), rem(56), rem(60);
+
+@each $size in $padding-sizes {
+  $i: list.index($padding-sizes, $size);
+
+  .pt-#{$i} { padding-top: $size !important; }
+  .pb-#{$i} { padding-bottom: $size !important; }
+  .pl-#{$i} { padding-left: $size !important; }
+  .pr-#{$i} { padding-right: $size !important; }
+}
+
+
+// display grid 부분 관련 헬퍼클래스
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(10);
+}

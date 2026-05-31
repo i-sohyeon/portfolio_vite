@@ -1,0 +1,44 @@
+@use "../../styles/utils/function" as *;
+
+// 팝업 관련 스타일
+/* popupOverlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+/* popupContent */
+.popupContent {
+  background: white;
+  padding: rem(12) rem(12) rem(36);
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+.content {
+  img{width: 100%;}
+  height: 680px;
+  overflow-y: scroll;
+}
+ button {
+  position: absolute;
+  top: rem(16);
+  right: rem(40);
+  width: rem(36);
+  height: rem(36);
+  border-radius: 50%;
+  cursor: pointer;  
+  background-image: url("../../assets/images/icons/ico_close.png");
+  background-size: rem(36) rem(36);
+  background-color: #ffffff;
+ }
+}

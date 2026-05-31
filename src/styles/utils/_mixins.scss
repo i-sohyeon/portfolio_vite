@@ -1,0 +1,54 @@
+// :root {
+//   font-size: 16px;
+// }
+
+/** px to rem **/
+// @mixin fontSize($size) {
+//   font-size: $size;
+//   font-size: px-to-rem($size);
+// }
+
+@mixin fontSize($fs: null, $fw: null) {
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+/* 모바일 세로 (0px ~ 479px) */
+@media (max-width: 479px) {
+  body {
+    background-color: pink;
+    // font-size: 90%;
+    // font-size: 62.5% !important;
+    /* 작은 화면에서는 1rem = 10px */
+    // padding: 0 20px;
+  }
+
+  .ui-content {
+    font-size: 62.5% !important;
+    padding: 0 20px;
+  }
+}
+
+/* 모바일 가로 & 테블릿 세로 (480px ~ 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  body {
+    h3, p {
+      // font-size: calc(16px / 16px * 1rem) !important;
+      // @include fontSize(36px);
+    }
+  }
+}
+
+/* 테블릿 가로 & 노트북 (768px ~ 1279px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  body {
+    section {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+/* 데스크톱 (1280px ~ ) */
+@media (min-width: 1280px) {
+}

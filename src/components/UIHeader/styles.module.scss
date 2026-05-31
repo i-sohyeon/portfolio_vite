@@ -1,0 +1,137 @@
+@use "../../styles/style.scss" as *;
+
+.ui-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  transition: "top 0.5s ease-in-out";
+  z-index: 100;
+  font-size: rem(30);
+  // size
+  &-md {
+    padding: rem(36) rem(24);
+  }
+  &-lg {
+    padding: rem(40) rem(32);
+  }
+
+  // color
+  &-bk {
+
+  }
+  &-wht {
+    .ui-icon-github-wht {
+      background-image: url("../../assets/images/icons/ico_github_wht.png");
+      background-size: 100% 100%;
+    }
+  }
+  a {
+    color: #3f89e6;
+    font-family: 'Bagel fat one';
+    text-decoration: none;
+  }
+  button.menu {
+    display: none; /* 기본 데스크톱에서는 숨김 */
+  }
+}
+
+
+.items {
+  display: flex;
+  .item {
+    transition: 0.5s;
+    &:hover {
+      scale: 1.3;
+    }
+    & + .item {
+      margin-left: rem(28);
+    }
+  }
+}
+
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+  .ui-header {
+    &-md {
+      padding: rem(24);
+    }
+    &-lg {
+      padding: rem(36) rem(28);
+    }
+  }
+  
+  button.menu {
+    display: block !important;
+    position: absolute;
+    top: rem(20);
+    right: rem(12);
+    cursor: pointer;
+    padding: rem(16);
+    // margin-right: rem(32);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    cursor: pointer;
+    > span {
+      display: inline-block;
+      background-color: #333;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      transition: all 0.3s ease;
+      margin: rem(2);
+    }
+  }
+  .menuOpen {
+    top: rem(20) !important;
+    right: rem(12) !important;
+    span:nth-child(1) {
+      display: none;
+    }
+    span:nth-child(2) {
+      width: 12px;
+      height: 12px;
+      background: #3f89e6;
+    }
+    span:nth-child(3) {
+      display: none;
+    }
+  }
+   .nav{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+   }
+  .open {
+    position: absolute;
+    top: rem(60);
+    right: rem(24);
+    display: block !important;
+    opacity: 1;
+    overflow: visible;
+    transition: .5s;
+    background: rgba(256,256,256,.2);
+    border-radius: rem(16);
+    border: 2px solid #111111;
+    padding: rem(16);
+    ul {
+      display: block;
+      li {
+        margin-left: 0 !important;
+        margin-bottom: rem(12);
+        a{
+          display: block;
+          height: rem(36);
+        }
+      }
+      li:last-child {margin-bottom: 0;}
+    }
+  }
+}

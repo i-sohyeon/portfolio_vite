@@ -1,0 +1,62 @@
+@use "../../styles/style.scss" as *;
+
+.ui-content {
+  // color
+  &-gray {
+    background-color: #f1f1f1;
+  }
+  &-black {
+    background-color: #111111;
+  }
+  &-blue {
+    background-color: #3e8ae3;
+  }
+  &-pink {
+    background-color: #fa9dcd;
+  }
+  &-green {
+    background-color: #049713; 
+  }
+  &-navy {
+    background-color: #2b2664;
+  }
+  
+  // pattern
+  &-check {
+    background-image: url("../../assets/images/background-pattern/main_top_bg_grid_gray.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  
+  &-halfcheck {
+    background-image: url("../../assets/images/background-pattern/bg_half_grid_yellow.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  
+  &-wave {
+    background-image: url("../../assets/images/background-pattern/bg_wave_blue.webp");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  
+  &-waveyellow {
+    background-image: url("../../assets/images/background-pattern/bg_wave_yellow.webp");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+  }
+}
+
+
+
+
+@media (max-width: 1023px) {
+  .ui-content {
+    padding: 0 rem(12);
+    box-sizing: border-box;
+  }
+}
