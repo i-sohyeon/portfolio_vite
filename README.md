@@ -198,7 +198,12 @@ https://6a1c0e1b70232ec461f8711c-lxdwxxomkk.chromatic.com/?path=/docs/components
 
 ---
 
+### 6. 스토리북 실행
+```bash
+npm run storybook
+```
 
+---
 ## 라이선스
 
 This project is licensed under the MIT License.
