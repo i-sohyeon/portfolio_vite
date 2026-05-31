@@ -14,13 +14,13 @@ React + TypeScript + Vite 기반으로 제작된 포트폴리오 프로젝트입
 ### 1. 저장소 클론
 
 ```bash
-git clone https://github.com/i-sohyeon/portfolio_vit.git
+git clone https://github.com/i-sohyeon/portfolio_vite.git
 ```
 
 ### 2. 프로젝트 폴더로 이동
 
 ```bash
-cd portfolio_vit
+cd portfolio_vite
 ```
 
 ### 3. 패키지 설치
@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 
-브라우저에서 표시되는 주소(예: [http://localhost:5173)로](http://localhost:5173%29로) 접속하여 확인할 수 있습니다.
+브라우저에서 표시되는 주소(예: [http://localhost:5173)로]) 접속하여 확인할 수 있습니다.
 
 ---
 
@@ -73,6 +73,8 @@ npm run preview
 npm install --save-dev gh-pages
 ```
 
+---
+
 ### 2. package.json 설정
 
 ```json
@@ -95,6 +97,8 @@ scripts 항목에 아래 내용을 추가합니다.
 }
 ```
 
+---
+
 ### 3. vite.config.ts 설정
 
 ```ts
@@ -107,14 +111,17 @@ export default defineConfig({
 });
 ```
 
+---
+
 ### 4. 배포 실행
 
 ```bash
 npm run deploy
 ```
 
-배포가 완료되면 아래 주소에서 확인할 수 있습니다.
+---
 
+### 5. 배포가 완료 되면 아래의 링크에서 확인 가능
 ```text
 https://i-sohyeon.github.io/portfolio_vite
 ```
@@ -145,6 +152,52 @@ src
 ```
 
 ---
+
+# Storybook
+### 1. Storybook 빌드
+```bash
+npm run build-storybook
+```
+storybook-static 폴더 생성되는지 확인 필요
+
+
+### 2. gh-pages 설치
+```bash
+npm install --save-dev gh-pages
+```
+
+### 3. 배포
+```bash
+npm run deploy-storybook
+```
+
+### 4. Chromatic 설정(포트폴리오와 같은 저장소에서 스토리북을 배포하면 덮어쓰기 됨)
+```bash
+npm install --save-dev chromatic
+```
+
+### 5. https://www.chromatic.com/ 접속 후 git 아이디로 가입 필요
+`Add Project`를 선택하면
+
+```
+Project Token
+chpt_xxxxxxxxxxxxxxxxxx
+```
+과 같은 프로젝트 토큰을 받음
+
+```bash
+npx chromatic --project-token=발급받은토큰 번호
+```
+커맨드 창에 복붙
+
+배포가 완료되면 아래 주소에서 확인할 수 있습니다.
+
+```text
+https://6a1c0e1b70232ec461f8711c-lxdwxxomkk.chromatic.com/?path=/docs/components-uibutton--docs
+```
+
+---
+
 
 ## 라이선스
 
