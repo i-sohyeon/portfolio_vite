@@ -1,4 +1,160 @@
-# React + TypeScript + Vite
+# Portfolio Vite
+
+React + TypeScript + Vite 기반으로 제작된 포트폴리오 프로젝트입니다.
+
+## 프로젝트 실행 환경
+
+* Node.js 18 이상 권장
+* npm 9 이상 권장
+
+---
+
+## 프로젝트 설치
+
+### 1. 저장소 클론
+
+```bash
+git clone https://github.com/i-sohyeon/portfolio_vit.git
+```
+
+### 2. 프로젝트 폴더로 이동
+
+```bash
+cd portfolio_vit
+```
+
+### 3. 패키지 설치
+
+```bash
+npm install
+```
+
+---
+
+## 개발 서버 실행
+
+아래 명령어를 실행하면 개발 서버가 시작됩니다.
+
+```bash
+npm run dev
+```
+
+브라우저에서 표시되는 주소(예: [http://localhost:5173)로](http://localhost:5173%29로) 접속하여 확인할 수 있습니다.
+
+---
+
+## 프로젝트 빌드
+
+배포용 파일을 생성합니다.
+
+```bash
+npm run build
+```
+
+빌드 결과물은 `dist` 폴더에 생성됩니다.
+
+---
+
+## 빌드 결과 미리보기
+
+```bash
+npm run preview
+```
+
+빌드된 결과를 로컬 환경에서 확인할 수 있습니다.
+
+---
+
+## GitHub Pages 배포
+
+### 1. gh-pages 패키지 설치
+
+```bash
+npm install --save-dev gh-pages
+```
+
+### 2. package.json 설정
+
+```json
+{
+  "homepage": "https://i-sohyeon.github.io/portfolio_vite"
+}
+```
+
+scripts 항목에 아래 내용을 추가합니다.
+
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+```
+
+### 3. vite.config.ts 설정
+
+```ts
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  base: "/your-repository/",
+});
+```
+
+### 4. 배포 실행
+
+```bash
+npm run deploy
+```
+
+배포가 완료되면 아래 주소에서 확인할 수 있습니다.
+
+```text
+https://i-sohyeon.github.io/portfolio_vite
+```
+
+---
+
+## 기술 스택
+
+* React
+* TypeScript
+* Vite
+* SCSS
+* Storybook
+
+---
+
+## 폴더 구조
+
+```text
+src
+├── assets
+├── components
+├── pages
+├── styles
+├── hooks
+├── utils
+└── App.tsx
+```
+
+---
+
+## 라이선스
+
+This project is licensed under the MIT License.
+
+
+
+
+
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -72,4 +228,4 @@ export default defineConfig([
     },
   },
 ])
-```
+``` -->

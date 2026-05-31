@@ -1,7 +1,7 @@
 import React from 'react';
 import type { UIButtonProps } from "./types";
-import styles from "./styles.module.scss";
-import { Link, useLocation } from 'react-router-dom';
+// import styles from "./styles.module.scss";
+import { Link } from 'react-router-dom';
 
 // export const Text: React.FC<UIButtonProps> = ({ 
 //   variant,
@@ -37,7 +37,7 @@ import { Link, useLocation } from 'react-router-dom';
 // };
 
 
-export const Text: React.FC<UIButtonProps> = ({ to, children, className, onClick }) => {
+export const Text: React.FC<UIButtonProps> = ({ to, children, className }) => {
   if (!children) {
     return null;
   }

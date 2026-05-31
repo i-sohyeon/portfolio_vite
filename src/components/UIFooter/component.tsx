@@ -8,7 +8,6 @@ import { UIText } from "../UIText";
 
 export const UIFooter: React.FC<UIFooterProps> = ({
   variant,
-  children,
   className,
   as: UIFooter = "footer",
 }) => {

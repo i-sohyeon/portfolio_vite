@@ -15,6 +15,7 @@ export default defineConfig({
   plugins: [react(), babel({
     presets: [reactCompilerPreset()]
   })],
+  base: "/portfolio_vite/",
   test: {
     projects: [{
       extends: true,

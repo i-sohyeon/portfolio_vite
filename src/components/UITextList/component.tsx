@@ -12,9 +12,6 @@ export const Normal: React.FC<UITextListNormalProps> = ({
   variant,
   checkItems,
   className,
-  children,
-  size,
-  ...rest
 }) => {
   const classes = [
     styles[`ui-textList`],
@@ -37,9 +34,7 @@ export const Check: React.FC<UITextListCheckProps> = ({
   variant,
   checkItems,
   className,
-  children,
   size,
-  ...rest
 }) => {
   const classes = [
     styles[`ui-textList`],

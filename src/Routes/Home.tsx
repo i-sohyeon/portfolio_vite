@@ -235,21 +235,21 @@ function Home() {
                 title="현대카드 web/app 운영"
                 titleColor="black"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/hyundaicard.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hyundaicard.png`}
                 bgColor="gray"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/06_content.webp"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/06_content.webp`} alt="" />
                           <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 작업한 이벤트 페이지</UIText.Basic>
 
                           <UIBox.Div display="grid" className="grid-2 pt-0">
                           <UIBox.Div className="mt-4">
                               <UIBox.Scroll 
                                 href="https://www.hyundaicard.com/koreanair/event/event_2512.html"
-                                imgSrc={"/assets/images/swiper/hd_koreanair_year-end.png"} className="mt-5">
+                                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_koreanair_year-end.png`} className="mt-5">
                               </UIBox.Scroll>
                               <UIBox.Div className="pl-4">
                                 <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 대한항공카드 이벤트 페이지</UIText.Basic>
@@ -261,7 +261,7 @@ function Home() {
                             <UIBox.Div className="mt-4">
                               <UIBox.Scroll 
                                 href="https://hyundaicard.com/costco/m/html/costco_cashBack2510_case03_v1.html"
-                                imgSrc={"/assets/images/swiper/hd_costco_2.png"} className="mt-5">
+                                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco_2.png`} className="mt-5">
                               </UIBox.Scroll>
                               <UIBox.Div className="pl-4">
                                 <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
@@ -273,7 +273,7 @@ function Home() {
                             <UIBox.Div className="mt-4">
                               <UIBox.Scroll 
                                 href="https://www.hyundaicard.com/m/HCSP/M_koreanair_hk.html"
-                                imgSrc={"/assets/images/swiper/hd_hyundaiXkoreanair.png"} className=" mt-5">
+                                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_hyundaiXkoreanair.png`} className=" mt-5">
                               </UIBox.Scroll>
                               <UIBox.Div className="pl-4">
                                 <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 현대카드 X 대한항공 이벤트 페이지</UIText.Basic>
@@ -285,7 +285,7 @@ function Home() {
                             <UIBox.Div className="mt-4">
                               <UIBox.Scroll 
                                 href="https://www.hyundaicard.com/m/tribe/html/amex_centurion_newyork.html"
-                                imgSrc={"/assets/images/swiper/hd_tribe_event.png"} className="mt-5">
+                                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_tribe_event.png`} className="mt-5">
                               </UIBox.Scroll>
                               <UIBox.Div className="pl-4">
                                 <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 tribe 이벤트 페이지</UIText.Basic>
@@ -298,7 +298,7 @@ function Home() {
                             <UIBox.Div className="mt-4">
                               <UIBox.Scroll 
                                 href="https://www.hyundaicard.com/costco/m/html/costco_pyeongtaek1.html"
-                                imgSrc={"/assets/images/swiper/hd_costco.png"} className=" mt-5">
+                                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco.png`} className=" mt-5">
                               </UIBox.Scroll>
                               <UIBox.Div className="pl-4">
                                 <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
@@ -310,7 +310,7 @@ function Home() {
                             <UIBox.Div className="mt-4">
                               <UIBox.Scroll 
                                 href="https://www.hyundaicard.com/emart/m/html/emart_event2501.html"
-                                imgSrc={"/assets/images/swiper/hd_emart.png"} className="mt-5">
+                                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_emart.png`} className="mt-5">
                               </UIBox.Scroll>
                               <UIBox.Div className="pl-4">
                                 <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 이마트 이벤트 페이지</UIText.Basic>
@@ -323,7 +323,7 @@ function Home() {
                             <UIBox.Div className="mt-4">
                               <UIBox.Scroll 
                                 href="https://www.hyundaicard.com/mdm/thepurple/m_dm_purple_2501.html"
-                                imgSrc={"/assets/images/swiper/hd_the_purple.png"} className=" mt-5">
+                                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_the_purple.png`} className=" mt-5">
                               </UIBox.Scroll>
                               <UIBox.Div className="pl-4">
                                 <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 the purple special offer</UIText.Basic>
@@ -374,14 +374,14 @@ function Home() {
                 title="우리은행 won 뱅킹 재구축"
                 titleColor="white"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/wooribank.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/wooribank.png`}
                 bgColor="navy"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/wooribank.png"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/wooribank.png`} alt="" />
                         </div>
                         <p><br/>해당 팝업 영역은 현재 이미지 작업중입니다. <br/> <strong>경력 기술서</strong>를 확인해주세요!<br/> 현재는 [문구야놀자] 슬라이드부터 팝업 이미지를 확인하실 수 있습니다!! </p>
                     </div>
@@ -426,14 +426,14 @@ function Home() {
                 title="농협 올원뱅크 리뉴얼 구축"
                 titleColor="black"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/nhbank.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/nhbank.png`}
                 bgColor="green"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/nhbank.png"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/nhbank.png`} alt="" />
                         </div>
                         <p><br/>해당 팝업 영역은 현재 이미지 작업중입니다. <br/> <strong>경력 기술서</strong>를 확인해주세요!<br/> 현재는 [문구야놀자] 슬라이드부터 팝업 이미지를 확인하실 수 있습니다!! </p>
                     </div>
@@ -476,14 +476,14 @@ function Home() {
                 title="KB국민은행 멤버십 플랫폼"
                 titleColor="yellow"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/kbbank.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/kbbank.png`}
                 bgColor="brown"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/kbbank.png"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/kbbank.png`} alt="" />
                         </div>
                         <p><br/>해당 팝업 영역은 현재 이미지 작업중입니다. <br/> <strong>경력 기술서</strong>를 확인해주세요!<br/> 현재는 [문구야놀자] 슬라이드부터 팝업 이미지를 확인하실 수 있습니다!! </p>
                     </div>
@@ -526,7 +526,7 @@ function Home() {
                 title="문구야놀자(PC/Mobile)"
                 titleColor="purple"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/playmoongu.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/playmoongu.png`}
                 bgColor="yellow"
                 onClick={() =>
                   handleOpenPopup(
@@ -534,7 +534,7 @@ function Home() {
                       {/* 팝업에 나올 전용 내용 */}
                     
                         <div>
-                          <img src={"/assets/images/swiper/01_content.webp"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/01_content.webp`} alt="" />
                         </div>
                     </div>
                   )
@@ -577,14 +577,14 @@ function Home() {
                 title="딸기콩(PC/Mobile)"
                 titleColor="green"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/ddalgicong.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/ddalgicong.png`}
                 bgColor="red"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/03_content.webp"} alt="" loading="lazy" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/03_content.webp`} alt="" loading="lazy" />
                         </div>
                     </div>
                   )
@@ -627,14 +627,14 @@ function Home() {
                 title="인조이웍스 홈페이지"
                 titleColor="black"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/enjoyworks.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/enjoyworks.png`}
                 bgColor="yellowgreen"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/05_content.webp"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/05_content.webp`} alt="" />
                         </div>
                     </div>
                   )
@@ -677,14 +677,14 @@ function Home() {
                 title="굿뜨래페이"
                 titleColor="white"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/goodtraepay.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/goodtraepay.png`}
                 bgColor="navy"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/04_content.webp"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/04_content.webp`} alt="" />
                         </div>
                     </div>
                   )
@@ -727,14 +727,14 @@ function Home() {
                 title="딸기콩 관리자"
                 titleColor="green"
                 // content="Adaptive Page Publishing"
-                imgSrc={"/assets/images/swiper/ddalgicong_admin.png"}
+                imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/ddalgicong_admin.png`}
                 bgColor="red"
                 onClick={() =>
                   handleOpenPopup(
                     <div className="">
                       {/* 팝업에 나올 전용 내용 */}
                         <div>
-                          <img src={"/assets/images/swiper/02_content.webp"} alt="" />
+                          <img src={`${import.meta.env.BASE_URL}assets/images/swiper/02_content.webp`} alt="" />
                         </div>
                     </div>
                   )
@@ -789,7 +789,7 @@ function Home() {
                   🎨 웹 콘텐츠 접근성 지침(WCAG) 준수명도 대비 기준 충족 (예: 텍스트/배경 대비 4.5:1 이상)
                 </UIText.Basic>
                 <UIBox.Div>
-                  <img src={"/assets/images/etc/acc_web_accessibility.webp"} alt="" />
+                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_web_accessibility.webp`} alt="" />
                 </UIBox.Div>
               </li>
               <li>
@@ -797,7 +797,7 @@ function Home() {
                   📑 시멘틱 태그 사용 &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;
                 </UIText.Basic>
                 <UIBox.Div>
-                  <img src={"/assets/images/etc/acc_semantic.webp"} alt="" />
+                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_semantic.webp`} alt="" />
                 </UIBox.Div>
               </li>
               {/* <li>⌨️ 키보드 네비게이션 지원</li> */}
@@ -811,7 +811,7 @@ function Home() {
                   📱 모바일, 태블릿, 데스크톱 해상도 대응 (Media Query를 사용하여 각 디바이스별 분기처리)
                 </UIText.Basic>
                 <UIBox.Div>
-                  <img src={"/assets/images/etc/acc_mediaquery.webp"} alt="" />
+                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_mediaquery.webp`} alt="" />
                 </UIBox.Div>
               </li>
               <li>
@@ -819,7 +819,7 @@ function Home() {
                   📏 뷰포트 단위 활용 (vw, vh, rem 등)
                 </UIText.Basic>
                 <UIBox.Div>
-                  <img src={"/assets/images/etc/acc_web_unit.webp"} alt="" />
+                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_web_unit.webp`} alt="" />
                 </UIBox.Div>
               </li>
             </ul>
@@ -832,7 +832,7 @@ function Home() {
                   🏙️ 이미지 압축 (WebP, AVIF)
                 </UIText.Basic>
                 <UIBox.Div>
-                  <img src={"/assets/images/etc/acc_webpimg.webp"} alt="" />
+                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_webpimg.webp`} alt="" />
                 </UIBox.Div>
               </li>
             </ul>

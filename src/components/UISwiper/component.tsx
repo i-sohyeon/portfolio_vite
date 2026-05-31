@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import type { SwiperProps, SlideItemProps } from "./types";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import styles from "./styles.module.scss";
 import "swiper/css";
@@ -13,8 +13,6 @@ export const Box: React.FC<SwiperProps> = ({
   children,
   className,
   titleColor,
-  ref,
-  ...rest
 }) => {
   // const swiperBoxRef = useRef<HTMLDivElement>(null);
   const swiperBoxRef = useRef<any>(null);
