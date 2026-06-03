@@ -41,16 +41,16 @@ export const Basic: React.FC<UITextProps> = ({
 export const Header: React.FC<UITextHeaderProps> = ({
   size,
   font,
-  variant,
+  // variant,
   color,
-  as = "h2",
+  // as = "h2",
   className,
   children,
   button,
   linkTo,
   ...rest
 }) => {
-  const [useLink, _] = useState(true);
+  const [useLink] = useState(true);
 
   const classes = [
     styles["ui-text-header"],

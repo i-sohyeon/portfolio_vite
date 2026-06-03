@@ -4,15 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+"dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "deploy-storybook": "storybook build && gh-pages -d storybook-static",
+    "deploy": "gh-pages -d dist", 
     "chromatic": "npx chromatic --project-token=chpt_46057afabea842a"
   },
   "dependencies": {

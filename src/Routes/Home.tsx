@@ -132,19 +132,20 @@ function Home() {
       </UIContent>
 
 
-      {/* <UIContent bgColor="gray" bgPattern="waveyellow">
+      {/* 
+      <UIContent bgColor="gray" bgPattern="waveyellow">
         <UIBox.Article as="article" align="center">
           <UIText.Header size="lg" align="left">ABOUT ME</UIText.Header>
           <UIBox.Div variant="content" jContent="space-between" aItems="middle" className="pt-0">
           저는 2021년 인조이 웍스에서 UI·UX 디자인과 퍼블리싱을 시작으로 커리어를 쌓아왔습니다.
-현재는 퍼블리싱 업무를 중심으로 실무를 진행하고 있지만,
-디자인에 대한 관심과 학습을 꾸준히 이어가고 있습니다.
+          현재는 퍼블리싱 업무를 중심으로 실무를 진행하고 있지만,
+          디자인에 대한 관심과 학습을 꾸준히 이어가고 있습니다.
 
-일러스트·포토샵 및 웹디자인 기능사 자격증을 보유하고 있으며,
-개인 작업을 통해 디자인 역량 또한 지속적으로 발전시키고 있습니다.
+          일러스트·포토샵 및 웹디자인 기능사 자격증을 보유하고 있으며,
+          개인 작업을 통해 디자인 역량 또한 지속적으로 발전시키고 있습니다.
 
-디자인과 구현을 모두 이해하는 역량을 바탕으로,
-필요한 상황에서는 언제든 디자인 업무까지 확장할 수 있는 유연한 인재입니다.
+          디자인과 구현을 모두 이해하는 역량을 바탕으로,
+          필요한 상황에서는 언제든 디자인 업무까지 확장할 수 있는 유연한 인재입니다.
           </UIBox.Div>          
         </UIBox.Article>
       </UIContent> */}
@@ -781,7 +782,10 @@ function Home() {
 
       <UIContent bgColor="pink">
         <UIBox.Article variant="content">
-          <UIText.Header size="lg">ABOUT PORTFOLIO</UIText.Header>
+          <UIText.Header variant="h3" size="lg">
+            ABOUT PORTFOLIO
+            <Link to="https://main--6a1c0e1b70232ec461f8711c.chromatic.com/">스토리북 확인하기</Link>
+          </UIText.Header>
           <UIAccordion.Line variant="line" id="acc-1" title="1. 접근성 (Accessibility)">
             <ul>
               <li>
