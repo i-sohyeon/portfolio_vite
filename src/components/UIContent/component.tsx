@@ -3,7 +3,6 @@ import type { UIContentProps } from "./types";
 import styles from "./styles.module.scss";
 
 export const UIContent: React.FC<UIContentProps> = ({ 
-  variant="type1",
   bgColor,
   bgPattern,
   as: UIContent = "section",
@@ -15,7 +14,6 @@ export const UIContent: React.FC<UIContentProps> = ({
 
   const classes = [
     styles["ui-content"],
-    styles[`ui-content-${variant}`],
     styles[`ui-content-${bgColor}`],
     styles[`ui-content-${bgPattern}`],
     className
@@ -24,7 +22,7 @@ export const UIContent: React.FC<UIContentProps> = ({
   .join(" ");
 
   return (
-    <UIContent variant='type1' className={classes} style={{bgColor}} {...rest}>
+    <UIContent className={classes} style={{bgColor}} {...rest}>
       {children}
     </UIContent>
   );
