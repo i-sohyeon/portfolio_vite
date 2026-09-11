@@ -1,38 +1,39 @@
 import React from "react";
 import type {
+  UITextListCircleProps,
   UITextListCheckProps,
   ItemData,
-  UITextListCircleProps,
-  UITextListNormalProps,
   UITextListNestedProps,
   NestedItem,
 } from "./types";
 
 import styles from "./styles.module.scss";
 
-
-export const Normal: React.FC<UITextListNormalProps> = ({
+export const Circle: React.FC<UITextListCircleProps> = ({
   variant,
-  checkItems,
-  className,
+  ...props
 }) => {
   const classes = [
     styles["ui-textList"],
     styles[`ui-textList-${variant}`],
-    className,
   ]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <ul className={`${styles.checkList} ${classes}`}>
-      {checkItems.map((item, index) => (
-        <li key={index}>{item}</li>
+    <ul
+      {...props}
+      className={`${styles.circleList} ${classes}`}
+    >
+      {props.data.map((item) => (
+        <ItemComponent
+          key={item.id}
+          item={item}
+        />
       ))}
     </ul>
   );
 };
-
 
 export const Check: React.FC<UITextListCheckProps> = ({
   variant,
@@ -142,41 +143,15 @@ function ItemComponent(props: { item: ItemData }) {
 }
 
 
-export const Circle: React.FC<UITextListCircleProps> = ({
-  variant,
-  ...props
-}) => {
-  const classes = [
-    styles["ui-textList"],
-    styles[`ui-textList-${variant}`],
-  ]
-    .filter(Boolean)
-    .join(" ");
 
-  return (
-    <ul
-      {...props}
-      className={`${styles.circleList} ${classes}`}
-    >
-      {props.data.map((item) => (
-        <ItemComponent
-          key={item.id}
-          item={item}
-        />
-      ))}
-    </ul>
-  );
-};
 
 
 const UITextList = {
-  Normal,
   Nested,
   Check,
   Circle,
 };
 
-UITextList.Normal.displayName = "UITextList.Normal";
 UITextList.Nested.displayName = "UITextList.Nested";
 UITextList.Check.displayName = "UITextList.Check";
 UITextList.Circle.displayName = "UITextList.Circle";

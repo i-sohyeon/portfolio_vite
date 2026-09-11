@@ -352,7 +352,7 @@ function Home() {
                       </tr>
                       <tr>
                         <th scope="row">사용 툴</th>
-                        <td>CMS, VSCode, Figma, HTML, CSS, JQuery, Javascript</td>
+                        <td>CMS, VSCode, Figma, HTML, CSS, JQuery, Javascript, PhotoShop</td>
                       </tr>
                       <tr>
                         <th scope="row">웹주소</th>

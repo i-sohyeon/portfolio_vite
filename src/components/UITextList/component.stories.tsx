@@ -3,31 +3,17 @@ import { UITextList } from "./component";
 
 const meta = {
   title: "Components/UITextList",
-  component: UITextList.Normal,
+  component: UITextList.Check,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof UITextList.Normal>;
+} satisfies Meta<typeof UITextList.Check>;
 
 export default meta;
 
 
-/* ==============================
- * Normal
- * ============================== */
 
-type NormalStory = StoryObj<typeof UITextList.Normal>;
-
-export const Normal: NormalStory = {
-  args: {
-    checkItems: [
-      "React를 활용한 UI 컴포넌트 마크업 및 스타일 작업",
-      "웹 표준 및 웹 접근성을 고려한 마크업 작업",
-      "반응형 웹 UI 구축 및 유지보수",
-    ],
-  },
-};
 
 
 /* ==============================

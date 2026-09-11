@@ -5,17 +5,6 @@ export type UITextListStyle = "tenada" | "petendard";
 export type UITextListColor = "black" | "white";
 export type UITextListAlign = "left" | "center";
 
-export interface UITextListNormalProps
-  extends React.HTMLAttributes<HTMLElement> {
-  variant?: UITextListVariant;
-  size?: UITextListSize;
-  weight?: UITextListWeight;
-  color?: string;
-  font?: UITextListStyle;
-  as?: React.ElementType;
-  checkItems: string[];
-}
-
 export interface UITextListCheckProps
   extends React.HTMLAttributes<HTMLElement> {
   variant?: UITextListVariant;
