@@ -2,134 +2,77 @@
 
 .ui-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: rem(16);
   position: fixed;
   right: 0;
   left: 0;
   z-index: 100;
   max-width: 1280px;
   margin: 0 auto;
-  font-size: rem(30);
-  transition: "top 0.5s ease-in-out";
-  // size
-  &-md {
-    padding: rem(36) rem(24);
-    }
-  &-lg {
-    padding: rem(40) rem(32);
-    }
+  font-size: rem(28);
 
-  // color
+  &-md { padding: rem(36) rem(24); }
+  &-lg { padding: rem(40) rem(32); }
+}
 
-  &-wht {
-    .ui-icon-github-wht {
-      background-image: url("../../assets/images/icons/ico_github_wht.png");
-      background-size: 100% 100%;
-      }
-    }
-  a {
-    font-family: "Bagel fat one";
-    text-decoration: none;
-    color: $main-blue;
-    }
-  button.menu {
-    display: none; /* 기본 데스크톱에서는 숨김 */
-    }
+.logo a {
+  font-family: "Bagel fat one";
+  color: $main-blue;
+}
+
+.storybook-link {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(6);
+  flex-shrink: 0;
+  padding: rem(8) rem(16);
+  // border: rem(1) solid $main-black;
+  border-radius: rem(28);
+  background: $main-white;
+  color: $main-black;
+  font-size: rem(14);
+  font-weight: 700;
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
   }
+}
 
+.storybook-mark {
+  display: grid;
+  place-items: center;
+  width: rem(24);
+  height: rem(24);
+  border-radius: rem(4);
+  background: #ff4785;
+  color: $main-white;
+  font-size: rem(16);
+  font-weight: 700;
+}
 
-.items {
-  display: flex;
-  .item {
-    transition: .5s;
-    &:hover {
-      scale: 1.3;
-      }
-    & + .item {
-      margin-left: rem(28);
-      }
-    }
-  }
-
-
-/* 모바일 스타일 */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ui-header {
-    &-md {
-      padding: rem(24);
-      }
-    &-lg {
-      padding: rem(36) rem(28);
-      }
-    }
-
-  button.menu {
-    display: block !important;
-    // margin-right: rem(32);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: rem(20);
-    right: rem(12);
-    padding: rem(16);
-    background: none;
-    cursor: pointer;
-    cursor: pointer;
-    > span {
-      display: inline-block;
-      width: rem(6);
-      height: rem(6);
-      margin: rem(2);
-      background-color: $main-dark-gray;
-      border-radius: 50%;
-      transition: all .3s ease;
-      }
-    }
-  .menuOpen {
-    top: rem(20) !important;
-    right: rem(12) !important;
-    span:nth-child(1) {
-      display: none;
-      }
-    span:nth-child(2) {
-      width: rem(12);
-      height: rem(12);
-      background: $main-blue;
-      }
-    span:nth-child(3) {
-      display: none;
-      }
-    }
-  .nav{
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height .3s cubic-bezier(.4,0,.2,1), opacity .3s;
-    }
-  .open {
-    display: block !important;
-    position: absolute;
-    top: rem(60);
-    right: rem(24);
-    padding: rem(16);
-    background: rgba(256,256,256,.2);
-    border: rem(2) solid $main-black;
-    border-radius: rem(16);
-    overflow: visible;
-    opacity: 1;
-    transition: .5s;
-    ul {
-      display: block;
-      li {
-        margin-bottom: rem(12);
-        margin-left: 0 !important;
-        a{
-          display: block;
-          height: rem(36);
-          }
-        }
-      li:last-child {margin-bottom: 0;}
-      }
-    }
+    &-md { padding: rem(24); }
+    &-lg { padding: rem(36) rem(28); }
   }
+
+  .storybook-link {
+    gap: rem(8);
+    padding: rem(6) rem(12);
+    font-size: rem(14);
+  }
+}
+
+@media (max-width: 479px) {
+  .ui-header {
+    gap: rem(8);
+    font-size: rem(24);
+
+    &-md { padding: rem(20) rem(16); }
+  }
+
+  .storybook-name { display: none; }
+}

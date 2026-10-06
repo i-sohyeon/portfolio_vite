@@ -18,6 +18,7 @@ import {
   UIDivider,
   UIScroll,
   UIFooter,
+  UIIcon,
 } from "../components/v1";
 import { SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperClass } from "swiper/types";
@@ -1078,65 +1079,39 @@ function Home() {
 
       <UIContent bgColor="pink">
         <UIBox.Article variant="content">
-          <UIText.Header variant="h3" size="lg">
-            ABOUT PORTFOLIO
-            <Link to="https://main--6a1c0e1b70232ec461f8711c.chromatic.com/">스토리북 확인하기</Link>
-          </UIText.Header>
-          <UIAccordion.Line variant="line" id="acc-1" title="1. 접근성 (Accessibility)">
-            <ul>
-              <li>
-                <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
-                  🎨 웹 콘텐츠 접근성 지침(WCAG) 준수명도 대비 기준 충족 (예: 텍스트/배경 대비 4.5:1 이상)
-                </UIText.Basic>
-                <UIBox.Div>
-                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_web_accessibility.webp`} alt="" />
-                </UIBox.Div>
-              </li>
-              <li>
-                <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
-                  📑 시멘틱 태그 사용 &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;
-                </UIText.Basic>
-                <UIBox.Div>
-                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_semantic.webp`} alt="" />
-                </UIBox.Div>
-              </li>
-              {/* <li>⌨️ 키보드 네비게이션 지원</li> */}
-            </ul>
-          </UIAccordion.Line>
-          <UIDivider variant="type2" margin="0"/>
-          <UIAccordion.Line variant="line" id="acc-2" title="2. 반응형 디자인 (Responsive Design)">
-            <ul>
-              <li>
-                <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
-                  📱 모바일, 태블릿, 데스크톱 해상도 대응 (Media Query를 사용하여 각 디바이스별 분기처리)
-                </UIText.Basic>
-                <UIBox.Div>
-                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_mediaquery.webp`} alt="" />
-                </UIBox.Div>
-              </li>
-              <li>
-                <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
-                  📏 뷰포트 단위 활용 (vw, vh, rem 등)
-                </UIText.Basic>
-                <UIBox.Div>
-                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_web_unit.webp`} alt="" />
-                </UIBox.Div>
-              </li>
-            </ul>
-          </UIAccordion.Line>
-          <UIDivider variant="type2" margin="0"/>
-          <UIAccordion.Line variant="line" id="acc-3" title="3. 성능 최적화 (Performance Optimization)">
-            <ul>
-              <li>
-                <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
-                  🏙️ 이미지 압축 (WebP, AVIF)
-                </UIText.Basic>
-                <UIBox.Div>
-                  <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_webpimg.webp`} alt="" />
-                </UIBox.Div>
-              </li>
-            </ul>
-          </UIAccordion.Line>
+          <UIText.Header variant="h3" size="lg">ARCHIVE</UIText.Header>
+          <div className={styles["archive-grid"]}>
+            <a className={`${styles["archive-card"]} ${styles["archive-card-blog"]}`} href="https://s-notee.tistory.com/" target="_blank" rel="noopener noreferrer">
+              <span className={styles["archive-top"]}>
+                <span className={styles["archive-icon"]}><UIIcon variant="tistory" size="lg" /></span>
+                <span className={styles["archive-label"]}>01 / WRITE</span>
+              </span>
+              <h3>티스토리 블로그</h3>
+              <p>작업하며 배운 내용과<br />문제를 해결한 과정을 기록하였습니다.</p>
+              <span className={styles["archive-bottom"]}>기록 읽어보기 <span aria-hidden="true">→</span></span>
+              <span className="sr-only"> (새 창)</span>
+            </a>
+            <a className={`${styles["archive-card"]} ${styles["archive-card-github"]}`} href="https://github.com/i-sohyeon" target="_blank" rel="noopener noreferrer">
+              <span className={styles["archive-top"]}>
+                <span className={styles["archive-icon"]}><UIIcon variant="github" size="lg" /></span>
+                <span className={styles["archive-label"]}>02 / BUILD</span>
+              </span>
+              <h3>GitHub</h3>
+              <p>다양한 작업들을<br />꾸준히 저장하였습니다.</p>
+              <span className={styles["archive-bottom"]}>저장소 둘러보기 <span aria-hidden="true">→</span></span>
+              <span className="sr-only"> (새 창)</span>
+            </a>
+            <a className={`${styles["archive-card"]} ${styles["archive-card-code"]}`} href="https://codepen.io/sohyeon403" target="_blank" rel="noopener noreferrer">
+              <span className={styles["archive-top"]}>
+                <span className={styles["archive-icon"]}><UIIcon variant="codepen" size="lg" /></span>
+                <span className={styles["archive-label"]}>03 / PLAY</span>
+              </span>
+              <h3>CodePen</h3>
+              <p>작은 아이디어를 직접 구현한<br />UI와 인터랙션을 모아두었습니다.</p>
+              <span className={styles["archive-bottom"]}>코드조각 구경하기 <span aria-hidden="true">→</span></span>
+              <span className="sr-only"> (새 창)</span>
+            </a>
+          </div>
         </UIBox.Article>
       </UIContent>
       <UIFooter />
