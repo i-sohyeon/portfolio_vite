@@ -14,6 +14,7 @@ export const Box: React.FC<SwiperProps> = ({
   children,
   className,
   titleColor,
+  onSwiper,
 }) => {
   const classes = [
     styles[`ui-swiper`],
@@ -30,6 +31,7 @@ export const Box: React.FC<SwiperProps> = ({
     if (swiper.el) {
       swiper.el.style.overflow = "visible";
     }
+    onSwiper?.(swiper);
   };
 
   return (

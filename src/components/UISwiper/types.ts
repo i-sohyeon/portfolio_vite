@@ -1,3 +1,5 @@
+import type { Swiper as SwiperClass } from "swiper/types";
+
 export type SwiperVariant = "type1";
 export type SwiperBgColor = "red" | "yellow" | "gray" | "navy" | "green" | "brown" | "yellowgreen";
 export type SwiperTextColor = "purple" | "green" | "black" | "blue" | "yellow" | "white";
@@ -8,6 +10,7 @@ export interface SwiperProps extends React.HTMLAttributes<HTMLElement> {
   spaceBetween?: number;
   slidesPerView?: number;
   navigation?: boolean;
+  onSwiper?: (swiper: SwiperClass) => void;
   pagination?: boolean;
   modules?: string[];
   className?: string;

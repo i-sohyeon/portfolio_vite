@@ -1,0 +1,9 @@
+@use "../styles/utils/function" as *;
+@use "../styles/utils/variables" as *;
+
+.project-empty {
+  padding: rem(40) 0;
+  color: $main-black;
+  font-size: rem(14);
+}
+
