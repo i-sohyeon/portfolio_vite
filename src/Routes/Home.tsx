@@ -199,7 +199,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>CMS, VSCode, Figma, HTML, CSS, JQuery, Javascript, PhotoShop</td>
+                  <td>CMS, Figma, HTML, CSS, JQuery, Javascript, PhotoShop</td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -289,7 +289,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Figma, React, css(scss), Typescript, Git, pnpm</td>
+                  <td>Figma, React, css(scss), Typescript, Git</td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -377,7 +377,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Html, Css, JQuery, Javascript, Git, AdobeXD</td>
+                  <td>Html, Css, JQuery, Javascript, Git, AdobeXD</td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -463,7 +463,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Html, Scss, JQuery, Javascript, Gulp, Figma, CMS </td>
+                  <td>Html, Scss, JQuery, Javascript, Gulp, Figma, CMS </td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -516,7 +516,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
+                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -569,7 +569,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
+                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -622,7 +622,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
+                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -675,7 +675,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
+                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
@@ -728,7 +728,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">사용 툴</th>
-                  <td>VSCode, Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
+                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
