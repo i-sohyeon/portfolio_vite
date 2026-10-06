@@ -227,104 +227,71 @@ function Home() {
           title="개인 포트폴리오"
           titleColor="black"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hyundaicard.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/07_content.png`}
           bgColor="skyblue"
           onClick={() =>
             handleOpenPopup(
-              <div className="">
-                {/* 팝업에 나올 전용 내용 */}
-                  <div>
-                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/06_content.webp`} alt="" />
-                    <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 작업한 이벤트 페이지</UIText.Basic>
-
-                    <UIBox.Div display="grid" className="grid-2 pt-0">
-                    <UIBox.Div className="mt-4">
-                        <UIBox.Scroll 
-                          href="https://www.hyundaicard.com/koreanair/event/event_2512.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_koreanair_year-end.png`} className="mt-5">
-                        </UIBox.Scroll>
-                        <UIBox.Div className="pl-4">
-                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 대한항공카드 이벤트 페이지</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 기반으로 전체 css 수정</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 반응형페이지(PC/Mobile)</UIText.Basic>
+              <div>
+                <img src={`${import.meta.env.BASE_URL}assets/images/swiper/07_content.png`} alt="" />
+                <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 포트폴리오 설명서 (accordion 컴포넌트 작업중입니다)</UIText.Basic>
+                <div className="pl-4 pr-4">
+                  <UIAccordion.Line variant="line" id="portfolio-accessibility" title="1. 접근성 (Accessibility)">
+                    <ul>
+                      <li>
+                        <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
+                          🎨 웹 콘텐츠 접근성 지침(WCAG) 준수명도 대비 기준 충족 (예: 텍스트/배경 대비 4.5:1 이상)
+                        </UIText.Basic>
+                        <UIBox.Div>
+                          <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_web_accessibility.webp`} alt="" />
                         </UIBox.Div>
-                      </UIBox.Div>
-
-                      <UIBox.Div className="mt-4">
-                        <UIBox.Scroll 
-                          href="https://hyundaicard.com/costco/m/html/costco_cashBack2510_case03_v1.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco_2.png`} className="mt-5">
-                        </UIBox.Scroll>
-                        <UIBox.Div className="pl-4">
-                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 신규페이지 제작</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                      </li>
+                      <li>
+                        <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
+                          📑 시멘틱 태그 사용 &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;
+                        </UIText.Basic>
+                        <UIBox.Div>
+                          <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_semantic.webp`} alt="" />
                         </UIBox.Div>
-                      </UIBox.Div>
-
-                      <UIBox.Div className="mt-4">
-                        <UIBox.Scroll 
-                          href="https://www.hyundaicard.com/m/HCSP/M_koreanair_hk.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_hyundaiXkoreanair.png`} className=" mt-5">
-                        </UIBox.Scroll>
-                        <UIBox.Div className="pl-4">
-                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 현대카드 X 대한항공 이벤트 페이지</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 신규페이지 제작</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 이벤트 페이지</UIText.Basic>
+                      </li>
+                      {/* <li>⌨️ 키보드 네비게이션 지원</li> */}
+                    </ul>
+                  </UIAccordion.Line>
+                  <UIDivider variant="type2" margin="0"/>
+                  <UIAccordion.Line variant="line" id="portfolio-responsive" title="2. 반응형 디자인 (Responsive Design)">
+                    <ul>
+                      <li>
+                        <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
+                          📱 모바일, 태블릿, 데스크톱 해상도 대응 (Media Query를 사용하여 각 디바이스별 분기처리)
+                        </UIText.Basic>
+                        <UIBox.Div>
+                          <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_mediaquery.webp`} alt="" />
                         </UIBox.Div>
-                      </UIBox.Div>
-
-                      <UIBox.Div className="mt-4">
-                        <UIBox.Scroll 
-                          href="https://www.hyundaicard.com/m/tribe/html/amex_centurion_newyork.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_tribe_event.png`} className="mt-5">
-                        </UIBox.Scroll>
-                        <UIBox.Div className="pl-4">
-                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 tribe 이벤트 페이지</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 제작</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 라이트/다크모드 적용</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                      </li>
+                      <li>
+                        <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
+                          📏 뷰포트 단위 활용 (vw, vh, rem 등)
+                        </UIText.Basic>
+                        <UIBox.Div>
+                          <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_web_unit.webp`} alt="" />
                         </UIBox.Div>
-                      </UIBox.Div>
-
-                      <UIBox.Div className="mt-4">
-                        <UIBox.Scroll 
-                          href="https://www.hyundaicard.com/costco/m/html/costco_pyeongtaek1.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco.png`} className=" mt-5">
-                        </UIBox.Scroll>
-                        <UIBox.Div className="pl-4">
-                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 신규페이지 제작</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                      </li>
+                    </ul>
+                  </UIAccordion.Line>
+                  <UIDivider variant="type2" margin="0"/>
+                  <UIAccordion.Line variant="line" id="portfolio-performance" title="3. 성능 최적화 (Performance Optimization)">
+                    <ul>
+                      <li>
+                        <UIText.Basic size="sm" as="p" className="mt-10 mb-5">
+                          🏙️ 이미지 압축 (WebP, AVIF)
+                        </UIText.Basic>
+                        <UIBox.Div>
+                          <img src={`${import.meta.env.BASE_URL}assets/images/etc/acc_webpimg.webp`} alt="" />
                         </UIBox.Div>
-                      </UIBox.Div>
-
-                      <UIBox.Div className="mt-4">
-                        <UIBox.Scroll 
-                          href="https://www.hyundaicard.com/emart/m/html/emart_event2501.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_emart.png`} className="mt-5">
-                        </UIBox.Scroll>
-                        <UIBox.Div className="pl-4">
-                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 이마트 이벤트 페이지</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 제작</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
-                        </UIBox.Div>
-                       
-                      </UIBox.Div>
-
-                      <UIBox.Div className="mt-4">
-                        <UIBox.Scroll 
-                          href="https://www.hyundaicard.com/mdm/thepurple/m_dm_purple_2501.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_the_purple.png`} className=" mt-5">
-                        </UIBox.Scroll>
-                        <UIBox.Div className="pl-4">
-                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 the purple special offer</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 콘텐츠 수정</UIText.Basic>
-                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
-                        </UIBox.Div>
-                      </UIBox.Div>
-                    </UIBox.Div>
-                  </div>
+                      </li>
+                    </ul>
+                  </UIAccordion.Line>
+                  
+                </div>
               </div>
             )
           }
@@ -1108,6 +1075,7 @@ function Home() {
         </UIBox.Article>
       </UIContent>
 
+
       <UIContent bgColor="pink">
         <UIBox.Article variant="content">
           <UIText.Header variant="h3" size="lg">
@@ -1157,7 +1125,7 @@ function Home() {
             </ul>
           </UIAccordion.Line>
           <UIDivider variant="type2" margin="0"/>
-          <UIAccordion.Line variant="line" id="acc-2" title="3. 성능 최적화 (Performance Optimization)">
+          <UIAccordion.Line variant="line" id="acc-3" title="3. 성능 최적화 (Performance Optimization)">
             <ul>
               <li>
                 <UIText.Basic size="sm" as="p" className="mt-10 mb-5">

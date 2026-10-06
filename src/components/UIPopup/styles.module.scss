@@ -29,7 +29,7 @@
     overflow-y: scroll;
     img{width: 100%;}
     }
-  button {
+  > button {
     position: absolute;
     top: rem(16);
     right: rem(40);
