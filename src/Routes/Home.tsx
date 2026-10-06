@@ -315,7 +315,7 @@ function Home() {
                 </tr>
                 <tr>
                   <th scope="row">웹주소</th>
-                  <td><a href="https://www.hyundaicard.com" target="_blank" rel="noopener noreferrer">www.hyundaicard.com</a></td>
+                  <td><a href="https://i-sohyeon.github.io/portfolio_vite/" target="_blank" rel="noopener noreferrer">i-sohyeon.github.io/portfolio_vite</a></td>
                 </tr>
               </tbody>
             </table>
@@ -1079,7 +1079,7 @@ function Home() {
 
       <UIContent bgColor="pink">
         <UIBox.Article variant="content">
-          <UIText.Header variant="h3" size="lg">ARCHIVE</UIText.Header>
+          <UIText.Header variant="h3" size="lg" role="heading" aria-level={2}>ARCHIVE</UIText.Header>
           <div className={styles["archive-grid"]}>
             <a className={`${styles["archive-card"]} ${styles["archive-card-blog"]}`} href="https://s-notee.tistory.com/" target="_blank" rel="noopener noreferrer">
               <span className={styles["archive-top"]}>

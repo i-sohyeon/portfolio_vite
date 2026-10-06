@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import type { SlideItemProps, SwiperProps } from "./types";
 import { Swiper } from "swiper/react";
 import type { Swiper as SwiperClass } from "swiper/types"; // 1. Swiper 타입 임포트
@@ -66,20 +66,11 @@ export const SlideItem = ({
   bgColor,
   onClick,
 }: SlideItemProps & { onClick?: () => void }) => {
-  const swiperContentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (swiperContentRef.current) {
-      // Ref를 통해 스타일을 적용
-      swiperContentRef.current.style.width = "auto";
-    }
-  }, []);
-
   const classes = [styles[`ui-swiper-${bgColor}`]].filter(Boolean).join(" ");
   const colorClass = titleColor ? styles[`ui-title-color-${titleColor}`] : "";
 
   return (
-    <div ref={swiperContentRef} className={`${styles.slideItem} ${classes}`}>
+    <div className={`${styles.slideItem} ${classes}`}>
       <button onClick={onClick}>
         <img src={imgSrc} alt="" /> 
       </button>

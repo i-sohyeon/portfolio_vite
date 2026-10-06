@@ -57,6 +57,7 @@ export const UIHeader: React.FC<UIHeaderProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className={styles["storybook-link"]}
+        aria-label="스토리북 보기 (새 창)"
       >
         <span className={styles["storybook-mark"]} aria-hidden="true">S</span>
         <span className={styles["storybook-name"]}>스토리북 보기<span className="sr-only"> (새 창)</span></span>
