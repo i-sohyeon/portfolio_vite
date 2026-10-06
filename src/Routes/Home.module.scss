@@ -1,9 +1,20 @@
 @use "../styles/utils/function" as *;
 @use "../styles/utils/variables" as *;
 
+.project-badges {
+  margin-top: auto;
+  padding-top: rem(12);
+}
+
+@media (max-width: 767px) {
+  .project-badges {
+    // Reserve two badge rows so wrapping does not change their starting position.
+    min-height: rem(50);
+  }
+}
+
 .project-empty {
   padding: rem(40) 0;
   color: $main-black;
   font-size: rem(14);
 }
-

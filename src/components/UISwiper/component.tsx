@@ -15,6 +15,7 @@ export const Box: React.FC<SwiperProps> = ({
   className,
   titleColor,
   onSwiper,
+  pagination = false,
 }) => {
   const classes = [
     styles[`ui-swiper`],
@@ -44,10 +45,11 @@ export const Box: React.FC<SwiperProps> = ({
         320: { slidesPerView: 1 },
         480: { slidesPerView: 1.5 },
         768: { slidesPerView: 1.5 },
-        1024: { slidesPerView: 1.5 },
-        1280: { slidesPerView: 1.5 },
+        1024: { slidesPerView: 2 },
+        1280: { slidesPerView: 2 },
       }}
       navigation={false}
+      pagination={pagination ? { clickable: true } : false}
       className={`${styles.swiperBox} ${classes}`}
     >
       {/* 주의: Swiper의 직계 자식은 SwiperSlide여야 합니다 */}

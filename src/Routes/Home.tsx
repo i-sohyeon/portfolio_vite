@@ -13,6 +13,7 @@ import {
   SlideItem,
   UITable,
   UIBadge,
+  Badges,
   UIAccordion,
   UIDivider,
   UIScroll,
@@ -208,15 +209,159 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#CMS</UIBadge>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#적응형</UIBadge>
             <UIBadge size="md" variant="line">#Webview</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
+
+    {
+      id: "portfolio",
+      categories: ["personal"],
+      content: (
+        <SlideItem 
+          title="개인 포트폴리오"
+          titleColor="black"
+          // content="Adaptive Page Publishing"
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hyundaicard.png`}
+          bgColor="skyblue"
+          onClick={() =>
+            handleOpenPopup(
+              <div className="">
+                {/* 팝업에 나올 전용 내용 */}
+                  <div>
+                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/06_content.webp`} alt="" />
+                    <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 작업한 이벤트 페이지</UIText.Basic>
+
+                    <UIBox.Div display="grid" className="grid-2 pt-0">
+                    <UIBox.Div className="mt-4">
+                        <UIBox.Scroll 
+                          href="https://www.hyundaicard.com/koreanair/event/event_2512.html"
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_koreanair_year-end.png`} className="mt-5">
+                        </UIBox.Scroll>
+                        <UIBox.Div className="pl-4">
+                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 대한항공카드 이벤트 페이지</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 기반으로 전체 css 수정</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 반응형페이지(PC/Mobile)</UIText.Basic>
+                        </UIBox.Div>
+                      </UIBox.Div>
+
+                      <UIBox.Div className="mt-4">
+                        <UIBox.Scroll 
+                          href="https://hyundaicard.com/costco/m/html/costco_cashBack2510_case03_v1.html"
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco_2.png`} className="mt-5">
+                        </UIBox.Scroll>
+                        <UIBox.Div className="pl-4">
+                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 신규페이지 제작</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                        </UIBox.Div>
+                      </UIBox.Div>
+
+                      <UIBox.Div className="mt-4">
+                        <UIBox.Scroll 
+                          href="https://www.hyundaicard.com/m/HCSP/M_koreanair_hk.html"
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_hyundaiXkoreanair.png`} className=" mt-5">
+                        </UIBox.Scroll>
+                        <UIBox.Div className="pl-4">
+                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 현대카드 X 대한항공 이벤트 페이지</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 신규페이지 제작</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 이벤트 페이지</UIText.Basic>
+                        </UIBox.Div>
+                      </UIBox.Div>
+
+                      <UIBox.Div className="mt-4">
+                        <UIBox.Scroll 
+                          href="https://www.hyundaicard.com/m/tribe/html/amex_centurion_newyork.html"
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_tribe_event.png`} className="mt-5">
+                        </UIBox.Scroll>
+                        <UIBox.Div className="pl-4">
+                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 tribe 이벤트 페이지</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 제작</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 라이트/다크모드 적용</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                        </UIBox.Div>
+                      </UIBox.Div>
+
+                      <UIBox.Div className="mt-4">
+                        <UIBox.Scroll 
+                          href="https://www.hyundaicard.com/costco/m/html/costco_pyeongtaek1.html"
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco.png`} className=" mt-5">
+                        </UIBox.Scroll>
+                        <UIBox.Div className="pl-4">
+                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 신규페이지 제작</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                        </UIBox.Div>
+                      </UIBox.Div>
+
+                      <UIBox.Div className="mt-4">
+                        <UIBox.Scroll 
+                          href="https://www.hyundaicard.com/emart/m/html/emart_event2501.html"
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_emart.png`} className="mt-5">
+                        </UIBox.Scroll>
+                        <UIBox.Div className="pl-4">
+                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 이마트 이벤트 페이지</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 제작</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                        </UIBox.Div>
+                       
+                      </UIBox.Div>
+
+                      <UIBox.Div className="mt-4">
+                        <UIBox.Scroll 
+                          href="https://www.hyundaicard.com/mdm/thepurple/m_dm_purple_2501.html"
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_the_purple.png`} className=" mt-5">
+                        </UIBox.Scroll>
+                        <UIBox.Div className="pl-4">
+                          <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 the purple special offer</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 공통 스타일 가이드를 활용하여 콘텐츠 수정</UIText.Basic>
+                          <UIText.Basic size="xs" className="mt-1" align="left" as="p" weight="normal">- 모바일 전용 페이지</UIText.Basic>
+                        </UIBox.Div>
+                      </UIBox.Div>
+                    </UIBox.Div>
+                  </div>
+              </div>
+            )
+          }
+          >
+           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
+            <table>
+              <caption>개인 포트폴리오 작업기간, 인원, 사용 툴, 주소</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">프로젝트 기간</th>
+                  <td>2025. 12. ~</td>
+                </tr>
+                <tr>
+                  <th scope="row">작업 참여인원</th>
+                  <td>퍼블리싱 1명 </td>
+                </tr>
+                <tr>
+                  <th scope="row">사용 툴</th>
+                  <td>Figma, React, Vite</td>
+                </tr>
+                <tr>
+                  <th scope="row">웹주소</th>
+                  <td><a href="https://www.hyundaicard.com" target="_blank" rel="noopener noreferrer">www.hyundaicard.com</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </UITable.Default>
+          <Badges className={styles["project-badges"]}>
+            <UIBadge size="md" variant="line">#CMS</UIBadge>
+            <UIBadge size="md" variant="line">#유지보수</UIBadge>
+            <UIBadge size="md" variant="line">#적응형</UIBadge>
+            <UIBadge size="md" variant="line">#Webview</UIBadge>
+          </Badges>
+        </SlideItem>
+      ),
+    },
+
     {
       id: "wooribank",
       categories: ["publishing"],
@@ -298,12 +443,12 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#접근성</UIBadge>
             <UIBadge size="md" variant="line">#React</UIBadge>
             <UIBadge size="md" variant="line">#다크모드</UIBadge>
             <UIBadge size="md" variant="line">#APP구축</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
@@ -386,11 +531,11 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#디버깅</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
             <UIBadge size="md" variant="line">#다크모드</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
@@ -472,11 +617,11 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#Gulp</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
@@ -525,12 +670,12 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
@@ -578,12 +723,12 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
@@ -631,12 +776,12 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
@@ -684,12 +829,12 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#적응형</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },
@@ -737,13 +882,13 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <div className="mt-4">
+          <Badges className={styles["project-badges"]}>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
             <UIBadge size="md" variant="line">#부트스트랩</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </div>
+          </Badges>
         </SlideItem>
       ),
     },

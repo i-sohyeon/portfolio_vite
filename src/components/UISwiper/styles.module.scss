@@ -6,18 +6,63 @@
     display: none !important;
     }
   }
+.swiperBox {
+  :global(.swiper-pagination) {
+    display: none;
+    }
 
+  :global(.swiper-wrapper) {
+    align-items: stretch;
+    }
+
+  :global(.swiper-slide) {
+    display: flex;
+    height: auto;
+    }
+  }
+
+@media (max-width: 767px) {
+  .swiperBox {
+    :global(.swiper-pagination) {
+      display: block;
+      position: static;
+      margin-top: rem(24);
+      line-height: 1;
+      --swiper-pagination-color: #{$main-black};
+      --swiper-pagination-bullet-size: #{rem(10)};
+      --swiper-pagination-bullet-horizontal-gap: #{rem(6)};
+      }
+
+    :global(.swiper-pagination-bullet-active) {
+      width: rem(28);
+      border-radius: rem(20);
+      }
+
+    :global(.swiper-pagination-bullet):focus-visible {
+      outline: rem(3) solid $main-blue;
+      outline-offset: rem(4);
+      }
+
+    :global(.swiper-pagination-lock) {
+      display: none;
+      }
+    }
+  }
 
 // 데스크탑 1280px ~
 .slideItem {
-  // width: rem(740);
-  padding: rem(30) rem(40);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: rem(28) rem(32);
   background-color: #ccc !important;
   border: rem(3) solid $main-black;
   border-radius: rem(40);
 
   box-sizing: border-box;
   button {
+    flex-shrink: 0;
+    width: 100%;
     position: relative;
     padding: 0;
     background: none;
@@ -45,9 +90,9 @@
     }
   img {
     display: block;
-    width: rem(650);
-    height: rem(380);
-    background: #eee;
+    width: 100%;
+    height: auto;
+    // aspect-ratio: 65 / 38;
     border-radius: rem(28);
     transition: transform .8s ease;
 
@@ -57,7 +102,7 @@
     margin-top: rem(12);
     font-family: "tenada";
     font-size: rem(48);
-    // @include fontSize(48px, 500);
+    word-break: keep-all;
     letter-spacing: rem(-.8);
     & + p {
       font-family: "tenada";
@@ -69,15 +114,11 @@
 /* 모바일 세로 (0px ~ 320px, 479px) */
 @media (max-width: 479px) {
   .slideItem {
-    padding: rem(28) rem(16);
-    img {
-      width: 80vw;
-      height: rem(250);
-      }
+    padding: rem(24) rem(16);
     h3 {
       font-size: rem(30);
       & + p {
-        font-size: rem(20);
+        font-size: rem(16);
         }
       }
     }
@@ -86,15 +127,11 @@
 /* 모바일 가로 & 테블릿 세로 (480px ~ 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
   .slideItem {
-    padding: rem(28) rem(24);
-    img {
-      width: 54vw;
-      height: rem(340);
-      }
+    padding: rem(24);
     h3 {
       font-size: rem(36);
       & + p {
-        font-size: rem(24);
+        font-size: rem(16);
         }
       }
     }
@@ -104,9 +141,6 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
     .slideItem {
-      img {
-        width: 54vw;
-        }
       h3 {
         font-size: rem(40);
         & + p {
@@ -123,9 +157,7 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
   body {
     .slideItem {
-      img {
-        width: 54vw;
-        }
+
       h3 {
         font-size: rem(40);
         & + p {
@@ -144,6 +176,7 @@
 .ui-swiper-green {background-color: #35b659 !important;}
 .ui-swiper-brown {background-color: #766554 !important;}
 .ui-swiper-yellowgreen {background-color: #bbda41 !important;}
+.ui-swiper-skyblue {background-color: #3f89e6 !important;}
 
 // UITitleColor
 .ui-title-color-purple {color: #5815a5;}
