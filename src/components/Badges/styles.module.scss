@@ -1,3 +1,17 @@
+@use "../../styles/utils/function" as *;
+
 .badges {
   display: block;
 }
+
+.project-badges {
+  margin-top: auto;
+  padding-top: rem(12);
+  }
+
+@media (max-width: 767px) {
+  .project-badges {
+    min-height: rem(32);
+    }
+  }
+

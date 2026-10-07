@@ -210,7 +210,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#CMS</UIBadge>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#적응형</UIBadge>
@@ -320,10 +320,10 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
-            <UIBadge size="md" variant="line">#CMS</UIBadge>
-            <UIBadge size="md" variant="line">#유지보수</UIBadge>
-            <UIBadge size="md" variant="line">#적응형</UIBadge>
+          <Badges>
+            <UIBadge size="md" variant="line">#vite</UIBadge>
+            <UIBadge size="md" variant="line">#storybook</UIBadge>
+            <UIBadge size="md" variant="line">#React UI</UIBadge>
             <UIBadge size="md" variant="line">#Webview</UIBadge>
           </Badges>
         </SlideItem>
@@ -411,7 +411,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#접근성</UIBadge>
             <UIBadge size="md" variant="line">#React</UIBadge>
             <UIBadge size="md" variant="line">#다크모드</UIBadge>
@@ -499,7 +499,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#디버깅</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
             <UIBadge size="md" variant="line">#다크모드</UIBadge>
@@ -585,7 +585,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#Gulp</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
@@ -638,7 +638,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
@@ -691,7 +691,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
@@ -744,7 +744,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
@@ -797,7 +797,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#적응형</UIBadge>
@@ -850,7 +850,7 @@ function Home() {
               </tbody>
             </table>
           </UITable.Default>
-          <Badges className={styles["project-badges"]}>
+          <Badges>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
@@ -1046,7 +1046,7 @@ function Home() {
             <Link to="/Sub">경력기술서 확인하기</Link>
           </UIText.Header>
 
-          <UITab.Filter
+          <UITab.Filter<ProjectFilter>
             items={projectFilters}
             value={activeCategory}
             onChange={setActiveCategory}

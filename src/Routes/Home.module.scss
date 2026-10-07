@@ -1,17 +1,6 @@
 @use "../styles/utils/function" as *;
 @use "../styles/utils/variables" as *;
 
-.project-badges {
-  margin-top: auto;
-  padding-top: rem(12);
-  }
-
-@media (max-width: 767px) {
-  .project-badges {
-    min-height: rem(50);
-    }
-  }
-
 .project-empty {
   padding: rem(40) 0;
   font-size: rem(14);
@@ -37,7 +26,7 @@
   h3 {
     margin: rem(32) 0 rem(12);
     font-family: "tenada";
-    font-size: rem(30);
+    font-size: rem(32);
     line-height: 1.2;
     }
 
@@ -88,21 +77,14 @@
   border-top: rem(1) solid $main-black;
   }
 
-@media (max-width: 1023px) {
-  .archive-grid { gap: rem(16); }
-  .archive-card {
-    padding: rem(20);
-    h3 { font-size: rem(26); }
-    }
-  .archive-top { gap: rem(8); }
-  }
+
 
 @media (max-width: 767px) {
-  .archive-grid {gap: rem(24);  grid-template-columns: 1fr; }
+  .archive-grid {gap: rem(20);  grid-template-columns: 1fr; }
   .archive-intro {margin-bottom: rem(28);  font-size: rem(16); }
   .archive-card {
     padding: rem(24);
-    h3 { margin-top: rem(24); font-size: rem(30); }
+    h3 { margin-top: rem(24); font-size: rem(24); }
     p { margin-bottom: rem(24); }
     }
   }
