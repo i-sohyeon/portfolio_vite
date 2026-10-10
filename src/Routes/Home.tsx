@@ -990,9 +990,9 @@ function Home() {
               디자인부터 퍼블리싱, 프론트엔드까지 하나의 흐름으로 작업할 수 있는 툴과 기술을 활용합니다.
             </UIText.Basic>
           </UIBox.Div>
-          <UIBox.Div variant="archiveGrid" columns={2}>
+          <UIBox.Div display="grid" columns={2}>
             {skillGroups.map((group) => (
-              <UIBox.Div key={group.id} variant="archiveCard">
+              <UIBox.Div key={group.id} variant="outlineCard">
                 <UIBox.Div variant="archiveTop">
                   <UIBox.Div as="span" variant="archiveIcon">
                     <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">{group.icon}</UIText.Basic>
@@ -1118,8 +1118,8 @@ function Home() {
       <UIContent bgColor="pink">
         <UIBox.Article variant="content">
           <UIText.Header variant="h3" size="lg" role="heading" aria-level={2}>ARCHIVE</UIText.Header>
-          <UIBox.Div variant="archiveGrid">
-            <UIBox.Div as="a" variant="archiveCard" href="https://s-notee.tistory.com/" target="_blank" rel="noopener noreferrer">
+          <UIBox.Div display="grid" columns={3}>
+            <UIBox.Div as="a" variant="outlineCard" href="https://s-notee.tistory.com/" target="_blank" rel="noopener noreferrer">
               <UIBox.Div as="span" variant="archiveTop">
                 <UIBox.Div as="span" variant="archiveIcon"><UIIcon variant="tistory" size="lg" /></UIBox.Div>
                 <UIText.Basic variant="archiveLabel" weight="bold">01 / WRITE</UIText.Basic>
@@ -1129,7 +1129,7 @@ function Home() {
               <UIBox.Div as="span" variant="archiveFooter">기록 읽어보기 <UIText.Basic aria-hidden="true">→</UIText.Basic></UIBox.Div>
               <UIText.Basic className="sr-only"> (새 창)</UIText.Basic>
             </UIBox.Div>
-            <UIBox.Div as="a" variant="archiveCard" href="https://github.com/i-sohyeon" target="_blank" rel="noopener noreferrer">
+            <UIBox.Div as="a" variant="outlineCard" href="https://github.com/i-sohyeon" target="_blank" rel="noopener noreferrer">
               <UIBox.Div as="span" variant="archiveTop">
                 <UIBox.Div as="span" variant="archiveIcon"><UIIcon variant="github" size="lg" /></UIBox.Div>
                 <UIText.Basic variant="archiveLabel" weight="bold">02 / BUILD</UIText.Basic>
@@ -1139,7 +1139,7 @@ function Home() {
               <UIBox.Div as="span" variant="archiveFooter">저장소 둘러보기 <UIText.Basic aria-hidden="true">→</UIText.Basic></UIBox.Div>
               <UIText.Basic className="sr-only"> (새 창)</UIText.Basic>
             </UIBox.Div>
-            <UIBox.Div as="a" variant="archiveCard" href="https://codepen.io/sohyeon403" target="_blank" rel="noopener noreferrer">
+            <UIBox.Div as="a" variant="outlineCard" href="https://codepen.io/sohyeon403" target="_blank" rel="noopener noreferrer">
               <UIBox.Div as="span" variant="archiveTop">
                 <UIBox.Div as="span" variant="archiveIcon"><UIIcon variant="codepen" size="lg" /></UIBox.Div>
                 <UIText.Basic variant="archiveLabel" weight="bold">03 / PLAY</UIText.Basic>

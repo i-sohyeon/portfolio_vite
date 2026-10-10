@@ -1,4 +1,4 @@
-export type UIBoxVariant = "content" | "flex" | "card" | "outlineCard" | "archiveGrid" | "archiveCard" | "archiveTop" | "archiveIcon" | "archiveFooter";
+export type UIBoxVariant = "content" | "flex" | "card" | "outlineCard" | "archiveTop" | "archiveIcon" | "archiveFooter";
 export type UIBoxTextAlign = "left" | "center" | "right";
 export type UIBoxDisplay = "flex" | "block" | "inline-block" | "grid";
 export type UIBoxjustifyContent = "space-between";

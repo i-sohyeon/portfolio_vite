@@ -111,19 +111,19 @@
     }
 
   }
-// Archive layout variants
-.ui-box-archiveGrid {
+// Grid layouts and outline cards
+.ui-box-grid.ui-box-columns-2,
+.ui-box-grid.ui-box-columns-3 {
   display: grid;
   gap: rem(24);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-.ui-box-archiveGrid.ui-box-columns-2 {
+.ui-box-grid.ui-box-columns-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.ui-box-outlineCard,
-.ui-box-archiveCard {
+.ui-box-outlineCard {
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@
     }
   }
 
-.ui-box-archiveCard {
+.ui-box-outlineCard {
   h3 {
     margin: rem(32) 0 rem(12);
     font-family: "tenada";
@@ -189,19 +189,17 @@
 
 
 @media (max-width: 767px) {
-  .ui-box-archiveGrid,
-  .ui-box-archiveGrid.ui-box-columns-2 {gap: rem(20); grid-template-columns: 1fr; }
-  .ui-box-outlineCard,
-  .ui-box-archiveCard {
+  .ui-box-grid.ui-box-columns-3,
+  .ui-box-grid.ui-box-columns-2 {gap: rem(20); grid-template-columns: 1fr; }
+  .ui-box-outlineCard {
     padding: rem(24);
     }
-  .ui-box-archiveCard {
+  .ui-box-outlineCard {
     h3 { margin-top: rem(24); font-size: rem(24); }
     p { margin-bottom: rem(24); }
     }
   }
 
 @media (prefers-reduced-motion: reduce) {
-  .ui-box-outlineCard,
-  .ui-box-archiveCard { transition: none; &:hover { transform: none; } }
+  .ui-box-outlineCard { transition: none; &:hover { transform: none; } }
   }
