@@ -40,6 +40,7 @@ export const Div: React.FC<UIBoxProps> = ({
   as: Component = "div",
   align,
   display,
+  columns,
   jContent,
   aItems,
   className = "",
@@ -49,6 +50,7 @@ export const Div: React.FC<UIBoxProps> = ({
 }) => {
   const classes = [
     styles["ui-box-div"],
+    columns && styles[`ui-box-columns-${columns}`],
     variant && styles[`ui-box-${variant}`],
     align && styles[`ui-box-${align}`],
     display && styles[`ui-box-${display}`],

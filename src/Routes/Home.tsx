@@ -43,6 +43,13 @@ const projectFilters: { value: ProjectFilter; label: string }[] = [
   { value: "personal", label: "개인 프로젝트" },
 ];
 
+const skillGroups = [
+  { id: "development", number: "01", title: "DEVELOPMENT", icon: "⌨︎", tools: ["HTML", "SCSS", "JavaScript", "React", "TypeScript", "CSS Modules", "Storybook"] },
+  { id: "design", number: "02", title: "UI DESIGN", icon: "✎", tools: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Responsive UI", "CSS Animation"] },
+  { id: "workflow", number: "03", title: "WORKFLOW", icon: "⚙︎", tools: ["Git", "GitHub", "VS Code", "Cursor", "Vite", "Swiper", "Storybook"] },
+  { id: "ai", number: "04", title: "AI WORKFLOW", icon: "✦", tools: ["ChatGPT", "Codex", "Figma MCP", "AI-assisted Coding"] },
+];
+
 function Home() {
   const textList = [
     "현대카드 커머셜 web/app 운영",
@@ -188,27 +195,27 @@ function Home() {
           }
           >
            <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>현대카드 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2024. 12. ~</td>
-                </tr>
-                <tr>
-                  <th scope="row">작업 참여인원</th>
-                  <td>퍼블리싱 8명 </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>CMS, Figma, HTML, CSS, JQuery, Javascript, PhotoShop</td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td><a href="https://www.hyundaicard.com" target="_blank" rel="noopener noreferrer">www.hyundaicard.com</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>현대카드 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2024. 12. ~</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">작업 참여인원</UITable.Th>
+                  <UITable.Td>퍼블리싱 8명 </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>CMS, Figma, HTML, CSS, JQuery, Javascript, PhotoShop</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td><a href="https://www.hyundaicard.com" target="_blank" rel="noopener noreferrer">www.hyundaicard.com</a></UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#CMS</UIBadge>
@@ -298,27 +305,27 @@ function Home() {
           }
           >
            <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>개인 포트폴리오 작업기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2025. 12. ~</td>
-                </tr>
-                <tr>
-                  <th scope="row">작업 참여인원</th>
-                  <td>퍼블리싱 1명 </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Figma, React, Vite</td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td><a href="https://i-sohyeon.github.io/portfolio_vite/" target="_blank" rel="noopener noreferrer">i-sohyeon.github.io/portfolio_vite</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>개인 포트폴리오 작업기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2025. 12. ~</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">작업 참여인원</UITable.Th>
+                  <UITable.Td>퍼블리싱 1명 </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Figma, React, Vite</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td><a href="https://i-sohyeon.github.io/portfolio_vite/" target="_blank" rel="noopener noreferrer">i-sohyeon.github.io/portfolio_vite</a></UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#vite</UIBadge>
@@ -389,27 +396,27 @@ function Home() {
           >
 
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>우리은행 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2024. 04. ~ 2024. 12</td>
-                </tr>
-                <tr>
-                  <th scope="row">작업 참여인원</th>
-                  <td>퍼블리싱 12명 </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Figma, React, css(scss), Typescript, Git</td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td>우리WON뱅킹 앱</td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>우리은행 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2024. 04. ~ 2024. 12</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">작업 참여인원</UITable.Th>
+                  <UITable.Td>퍼블리싱 12명 </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Figma, React, css(scss), Typescript, Git</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td>우리WON뱅킹 앱</UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#접근성</UIBadge>
@@ -477,27 +484,27 @@ function Home() {
           }
           >
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>농협 올원뱅크 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2023. 08. ~ 2024. 03</td>
-                </tr>
-                <tr>
-                  <th scope="row">작업 참여인원</th>
-                  <td>퍼블리싱 3명 </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Html, Css, JQuery, Javascript, Git, AdobeXD</td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td>NH올원뱅크 앱</td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>농협 올원뱅크 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2023. 08. ~ 2024. 03</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">작업 참여인원</UITable.Th>
+                  <UITable.Td>퍼블리싱 3명 </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Html, Css, JQuery, Javascript, Git, AdobeXD</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td>NH올원뱅크 앱</UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#디버깅</UIBadge>
@@ -563,27 +570,27 @@ function Home() {
           }
           >
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>KB국민은행 멤버십 플랫폼 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2022. 11. ~ 2023. 07</td>
-                </tr>
-                <tr>
-                  <th scope="row">작업 참여인원</th>
-                  <td>퍼블리싱 4명 </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Html, Scss, JQuery, Javascript, Gulp, Figma, CMS </td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td>KB스타뱅킹 앱</td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>KB국민은행 멤버십 플랫폼 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2022. 11. ~ 2023. 07</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">작업 참여인원</UITable.Th>
+                  <UITable.Td>퍼블리싱 4명 </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Html, Scss, JQuery, Javascript, Gulp, Figma, CMS </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td>KB스타뱅킹 앱</UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#Gulp</UIBadge>
@@ -616,27 +623,27 @@ function Home() {
           }
           >
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>문구야놀자 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2021. 01. ~ 2022. 04</td>
-                </tr>
-                <tr>
-                  <th scope="row">참여도</th>
-                  <td>100% </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td><a href="https://playmoongu.com/brand" target="_blank" rel="noopener noreferrer">playmoongu.com/brand</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>문구야놀자 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2021. 01. ~ 2022. 04</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">참여도</UITable.Th>
+                  <UITable.Td>100% </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td><a href="https://playmoongu.com/brand" target="_blank" rel="noopener noreferrer">playmoongu.com/brand</a></UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
@@ -669,27 +676,27 @@ function Home() {
           }
           >
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>딸기콩 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2021. 01. ~ 2022. 04</td>
-                </tr>
-                <tr>
-                  <th scope="row">참여도</th>
-                  <td>100% </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td><a href="https://www.ddalgicong.com" target="_blank" rel="noopener noreferrer">www.ddalgicong.com</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>딸기콩 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2021. 01. ~ 2022. 04</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">참여도</UITable.Th>
+                  <UITable.Td>100% </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td><a href="https://www.ddalgicong.com" target="_blank" rel="noopener noreferrer">www.ddalgicong.com</a></UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
@@ -722,27 +729,27 @@ function Home() {
           }
           >
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>인조이웍스 홈페이지 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2021. 01. ~ 2022. 04</td>
-                </tr>
-                <tr>
-                  <th scope="row">참여도</th>
-                  <td>100% </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td><a href="http://enjoyworks.co.kr" target="_blank" rel="noopener noreferrer">enjoyworks.co.kr</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>인조이웍스 홈페이지 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2021. 01. ~ 2022. 04</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">참여도</UITable.Th>
+                  <UITable.Td>100% </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td><a href="http://enjoyworks.co.kr" target="_blank" rel="noopener noreferrer">enjoyworks.co.kr</a></UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
@@ -775,27 +782,27 @@ function Home() {
           }
           >
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>굿뜨래페이 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2021. 01. ~ 2022. 04</td>
-                </tr>
-                <tr>
-                  <th scope="row">참여도</th>
-                  <td>100% </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td><a href="https://goodtraepay.buyeo.go.kr" target="_blank" rel="noopener noreferrer">goodtraepay.buyeo.go.kr</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>굿뜨래페이 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2021. 01. ~ 2022. 04</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">참여도</UITable.Th>
+                  <UITable.Td>100% </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td><a href="https://goodtraepay.buyeo.go.kr" target="_blank" rel="noopener noreferrer">goodtraepay.buyeo.go.kr</a></UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
@@ -828,27 +835,27 @@ function Home() {
           }
           >
           <UITable.Default className="mt-4" variant="type1" size="md" align="left">
-            <table>
-              <caption>딸기콩 관리자 프로젝트 참여기간, 인원, 사용 툴, 주소</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">프로젝트 기간</th>
-                  <td>2021. 01. ~ 2022. 04</td>
-                </tr>
-                <tr>
-                  <th scope="row">참여도</th>
-                  <td>100% </td>
-                </tr>
-                <tr>
-                  <th scope="row">사용 툴</th>
-                  <td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </td>
-                </tr>
-                <tr>
-                  <th scope="row">웹주소</th>
-                  <td>.</td>
-                </tr>
-              </tbody>
-            </table>
+            <UITable.Table>
+              <UITable.Caption>딸기콩 관리자 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2021. 01. ~ 2022. 04</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">참여도</UITable.Th>
+                  <UITable.Td>100% </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>Html, Css(Scss), JQuery, Javascript, Gulp, Zeplin, AdobeXD </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">웹주소</UITable.Th>
+                  <UITable.Td>.</UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
           </UITable.Default>
           <Badges>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
@@ -973,6 +980,37 @@ function Home() {
 
 
 
+      {/* <UIContent bgColor="gray" bgPattern="check">
+        <UIBox.Article variant="content" aria-labelledby="skills-title">
+          <UIBox.Div>
+            <UIText.Header size="lg" role="heading" aria-level={2} id="skills-title" className="mb-6">
+              SKILLS &amp; TOOLS
+            </UIText.Header>
+            <UIText.Basic as="p" size="xs" className="mb-9">
+              디자인부터 퍼블리싱, 프론트엔드까지 하나의 흐름으로 작업할 수 있는 툴과 기술을 활용합니다.
+            </UIText.Basic>
+          </UIBox.Div>
+          <UIBox.Div variant="archiveGrid" columns={2}>
+            {skillGroups.map((group) => (
+              <UIBox.Div key={group.id} variant="archiveCard">
+                <UIBox.Div variant="archiveTop">
+                  <UIBox.Div as="span" variant="archiveIcon">
+                    <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">{group.icon}</UIText.Basic>
+                  </UIBox.Div>
+                  <UIText.Basic variant="archiveLabel" weight="bold">{group.number} /</UIText.Basic>
+                </UIBox.Div>
+                <UIText.Basic as="h3" font="tenada">{group.title}</UIText.Basic>
+                <Badges variant="wrap">
+                  {group.tools.map((tool) => (
+                    <UIBadge key={tool} size="md" bgColor="transparent">{tool}</UIBadge>
+                  ))}
+                </Badges>
+              </UIBox.Div>
+            ))}
+          </UIBox.Div>
+        </UIBox.Article>
+      </UIContent> */}
+
       <UIContent bgColor="blue" bgPattern="waveyellow">
         <UIBox.Article as="article" align="center">
           <UIText.Header size="lg" align="left">경력 CAREER</UIText.Header>
@@ -1080,38 +1118,38 @@ function Home() {
       <UIContent bgColor="pink">
         <UIBox.Article variant="content">
           <UIText.Header variant="h3" size="lg" role="heading" aria-level={2}>ARCHIVE</UIText.Header>
-          <div className={styles["archive-grid"]}>
-            <a className={`${styles["archive-card"]} ${styles["archive-card-blog"]}`} href="https://s-notee.tistory.com/" target="_blank" rel="noopener noreferrer">
-              <span className={styles["archive-top"]}>
-                <span className={styles["archive-icon"]}><UIIcon variant="tistory" size="lg" /></span>
-                <span className={styles["archive-label"]}>01 / WRITE</span>
-              </span>
-              <h3>티스토리 블로그</h3>
-              <p>작업하며 배운 내용과<br />문제를 해결한 과정을 기록하였습니다.</p>
-              <span className={styles["archive-bottom"]}>기록 읽어보기 <span aria-hidden="true">→</span></span>
-              <span className="sr-only"> (새 창)</span>
-            </a>
-            <a className={`${styles["archive-card"]} ${styles["archive-card-github"]}`} href="https://github.com/i-sohyeon" target="_blank" rel="noopener noreferrer">
-              <span className={styles["archive-top"]}>
-                <span className={styles["archive-icon"]}><UIIcon variant="github" size="lg" /></span>
-                <span className={styles["archive-label"]}>02 / BUILD</span>
-              </span>
-              <h3>GitHub</h3>
-              <p>다양한 작업들을<br />꾸준히 저장하였습니다.</p>
-              <span className={styles["archive-bottom"]}>저장소 둘러보기 <span aria-hidden="true">→</span></span>
-              <span className="sr-only"> (새 창)</span>
-            </a>
-            <a className={`${styles["archive-card"]} ${styles["archive-card-code"]}`} href="https://codepen.io/sohyeon403" target="_blank" rel="noopener noreferrer">
-              <span className={styles["archive-top"]}>
-                <span className={styles["archive-icon"]}><UIIcon variant="codepen" size="lg" /></span>
-                <span className={styles["archive-label"]}>03 / PLAY</span>
-              </span>
-              <h3>CodePen</h3>
-              <p>작은 아이디어를 직접 구현한<br />UI와 인터랙션을 모아두었습니다.</p>
-              <span className={styles["archive-bottom"]}>코드조각 구경하기 <span aria-hidden="true">→</span></span>
-              <span className="sr-only"> (새 창)</span>
-            </a>
-          </div>
+          <UIBox.Div variant="archiveGrid">
+            <UIBox.Div as="a" variant="archiveCard" href="https://s-notee.tistory.com/" target="_blank" rel="noopener noreferrer">
+              <UIBox.Div as="span" variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon"><UIIcon variant="tistory" size="lg" /></UIBox.Div>
+                <UIText.Basic variant="archiveLabel" weight="bold">01 / WRITE</UIText.Basic>
+              </UIBox.Div>
+              <UIText.Basic as="h3" font="tenada">티스토리 블로그</UIText.Basic>
+              <UIText.Basic as="p">작업하며 배운 내용과<br />문제를 해결한 과정을 기록하였습니다.</UIText.Basic>
+              <UIBox.Div as="span" variant="archiveFooter">기록 읽어보기 <UIText.Basic aria-hidden="true">→</UIText.Basic></UIBox.Div>
+              <UIText.Basic className="sr-only"> (새 창)</UIText.Basic>
+            </UIBox.Div>
+            <UIBox.Div as="a" variant="archiveCard" href="https://github.com/i-sohyeon" target="_blank" rel="noopener noreferrer">
+              <UIBox.Div as="span" variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon"><UIIcon variant="github" size="lg" /></UIBox.Div>
+                <UIText.Basic variant="archiveLabel" weight="bold">02 / BUILD</UIText.Basic>
+              </UIBox.Div>
+              <UIText.Basic as="h3" font="tenada">GitHub</UIText.Basic>
+              <UIText.Basic as="p">다양한 작업들을<br />꾸준히 저장하였습니다.</UIText.Basic>
+              <UIBox.Div as="span" variant="archiveFooter">저장소 둘러보기 <UIText.Basic aria-hidden="true">→</UIText.Basic></UIBox.Div>
+              <UIText.Basic className="sr-only"> (새 창)</UIText.Basic>
+            </UIBox.Div>
+            <UIBox.Div as="a" variant="archiveCard" href="https://codepen.io/sohyeon403" target="_blank" rel="noopener noreferrer">
+              <UIBox.Div as="span" variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon"><UIIcon variant="codepen" size="lg" /></UIBox.Div>
+                <UIText.Basic variant="archiveLabel" weight="bold">03 / PLAY</UIText.Basic>
+              </UIBox.Div>
+              <UIText.Basic as="h3" font="tenada">CodePen</UIText.Basic>
+              <UIText.Basic as="p">작은 아이디어를 직접 구현한<br />UI와 인터랙션을 모아두었습니다.</UIText.Basic>
+              <UIBox.Div as="span" variant="archiveFooter">코드조각 구경하기 <UIText.Basic aria-hidden="true">→</UIText.Basic></UIBox.Div>
+              <UIText.Basic className="sr-only"> (새 창)</UIText.Basic>
+            </UIBox.Div>
+          </UIBox.Div>
         </UIBox.Article>
       </UIContent>
       <UIFooter />

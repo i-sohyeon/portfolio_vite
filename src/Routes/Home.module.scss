@@ -1,94 +1,20 @@
 @use "../styles/utils/function" as *;
 @use "../styles/utils/variables" as *;
 
+.skills-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: rem(36);
+  height: rem(36);
+  border-radius: 50%;
+  background: $main-black;
+  color: $main-white;
+  font-size: rem(24);
+}
+
 .project-empty {
   padding: rem(40) 0;
   font-size: rem(14);
   color: $main-black;
-  }
-
-.archive-grid {
-  display: grid;
-  gap: rem(24);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-.archive-card {
-  display: flex;
-  flex-direction: column;
-  padding: rem(28);
-  color: $main-black;
-  background-color: rgba(255,255,255,.2);
-  border: rem(3) solid $main-black;
-  border-radius: rem(32);
-  transition: transform .2s ease, box-shadow .2s ease;
-
-  h3 {
-    margin: rem(32) 0 rem(12);
-    font-family: "tenada";
-    font-size: rem(32);
-    line-height: 1.2;
-    }
-
-  p {
-    margin-bottom: rem(32);
-    font-size: rem(16);
-    line-height: 1.7;
-    word-break: keep-all;
-    }
-
-  &:hover {
-    transform: translateY(rem(-4));
-    }
-
-  &:focus-visible {
-    outline: rem(3) solid $main-blue;
-    outline-offset: rem(6);
-    }
-  }
-
-.archive-top {
-  display: flex;
-  align-items: center;
-  gap: rem(12);
-  }
-
-.archive-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-shrink: 0;
-  }
-
-.archive-label {
-  font-size: rem(12);
-  font-weight: 700;
-  }
-
-.archive-bottom {
-  display: flex;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: rem(20);
-  font-size: rem(15);
-  font-weight: 700;
-
-  border-top: rem(1) solid $main-black;
-  }
-
-
-
-@media (max-width: 767px) {
-  .archive-grid {gap: rem(20);  grid-template-columns: 1fr; }
-  .archive-intro {margin-bottom: rem(28);  font-size: rem(16); }
-  .archive-card {
-    padding: rem(24);
-    h3 { margin-top: rem(24); font-size: rem(24); }
-    p { margin-bottom: rem(24); }
-    }
-  }
-
-@media (prefers-reduced-motion: reduce) {
-  .archive-card { transition: none; &:hover { transform: none; } }
   }

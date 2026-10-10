@@ -8,7 +8,8 @@ export type UITextVariant =
   | "h3"
   | "p"
   | "span"
-  | "caption";
+  | "caption"
+  | "archiveLabel";
 
 export type UITextSize = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 export type UITextWeight = "normal" | "bold";
