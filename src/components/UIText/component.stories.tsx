@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { BrowserRouter } from "react-router-dom"; // Link 컴포넌트 에러 방지용
 import { UIText } from "./component";
 
 const meta: Meta<typeof UIText.Basic> = {
@@ -40,14 +39,7 @@ type HeaderStory = StoryObj<typeof UIText.Header>;
 export const HeaderText: HeaderStory = {
   name: "UIText.Header",
   render: (args) => <UIText.Header {...args} />,
-  // 중요! Header 내부에 <Link>가 있으므로 라우터 환경을 데코레이터로 감싸줍니다.
-  decorators: [
-    (Story) => (
-      <BrowserRouter>
-        <Story />
-      </BrowserRouter>
-    ),
-  ],
+  // Link에 필요한 Router는 전역 preview 데코레이터에서 제공합니다.
   args: {
     size: "md",
     children: "섹션 제목입니다",

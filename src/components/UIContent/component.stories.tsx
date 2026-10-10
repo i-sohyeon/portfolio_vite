@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { UIContent } from "./component";
 import { UIText } from "../../components/v1";
-import { BrowserRouter } from "react-router-dom";
 
 const meta: Meta<typeof UIContent> = {
   title: "Components/UIContent",
@@ -41,14 +40,12 @@ export const Default: Story = {
     // bgPattern:"",
     children: (
       <div style={{ padding: "40px 20px", textAlign: "left", height: 100}}>
-        <BrowserRouter>
           <UIText.Header button="더보기" color="white" size="md">
             섹션 제목입니다
           </UIText.Header>
           <UIText.Basic size="lg" color="white">
             텍스트 영역
           </UIText.Basic>
-        </BrowserRouter>
     </div>
     ),
   },
@@ -62,11 +59,9 @@ export const WithPattern: Story = {
     bgPattern:"check",
     children: (
       <div style={{ padding: "40px 20px", textAlign: "left", height: 300}}>
-        <BrowserRouter>
           <UIText.Header button="더보기" color="black" linkTo="/" size="md">
             섹션 제목입니다
           </UIText.Header>
-        </BrowserRouter>
         <p>여기에 본문 내용이나 다른 컴포넌트들이 children으로 들어갑니다.</p>
         <p>여기에 본문 내용이나 다른 컴포넌트들이 children으로 들어갑니다.</p>
         <p>여기에 본문 내용이나 다른 컴포넌트들이 children으로 들어갑니다.</p>

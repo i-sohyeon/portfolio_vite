@@ -13,7 +13,7 @@ import { UIBanner } from "../UIBanner";
 import { UIText } from "../UIText";
 
 // 타입에 정의된 literal union 값을 스토리북 컨트롤 옵션으로 매핑
-const variantOptions: UIBoxVariant[] = ["content", "flex", "card"];
+const variantOptions: UIBoxVariant[] = ["content", "flex", "card", "outlineCard", "archiveTop", "archiveIcon", "archiveFooter"];
 const alignOptions: UIBoxTextAlign[] = ["left", "center", "right"];
 const displayOptions: UIBoxDisplay[] = ["flex", "block", "inline-block", "grid"];
 const jContentOptions: UIBoxjustifyContent[] = ["space-between"];
@@ -25,6 +25,7 @@ const meta: Meta<typeof UIBox.Div> = {
   component: UIBox.Div,
   tags: ["autodocs"],
   argTypes: {
+    columns: { control: "select", options: [2, 3], description: "아카이브 카드 열 수" },
     variant: {
       control: "select",
       options: variantOptions,
@@ -181,4 +182,21 @@ export const ScrollBox: Story = {
       </p>
     </UIBox.Scroll>
   ),
+};
+// 4. 공통 테두리 카드
+export const OutlineCard: Story = {
+  args: { variant: "outlineCard", children: "SKILLS & TOOLS에서 사용하는 공통 카드입니다." },
+};
+
+// 5. 아카이브 카드 배치
+export const OutlineCardGrid: Story = {
+  args: { display: "grid", columns: 3 },
+  render: (args) => <UIBox.Div {...args}>
+    {["티스토리 블로그", "GitHub", "CodePen"].map((title, index) => <UIBox.Div key={title} variant="outlineCard">
+      <UIBox.Div variant="archiveTop"><UIText.Basic variant="archiveLabel" weight="bold">0{index + 1} / ARCHIVE</UIText.Basic></UIBox.Div>
+      <UIText.Basic as="h3" font="tenada">{title}</UIText.Basic>
+      <UIText.Basic as="p">작업과 기록을 모아두는 공간입니다.</UIText.Basic>
+      <UIBox.Div as="span" variant="archiveFooter">둘러보기</UIBox.Div>
+    </UIBox.Div>)}
+  </UIBox.Div>,
 };

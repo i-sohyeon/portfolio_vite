@@ -16,12 +16,12 @@ const meta: Meta<typeof UIBadge> = {
     },
     bgColor: {
       control: "select",
-      options: ["navy", "pink", "white"],
+      options: ["navy", "pink", "transparent"],
       description: "배경 색상을 지정합니다.",
     },
     color: {
       control: "select",
-      options: ["white", "black", "navy", "pink"],
+      options: ["white", "black"],
       description: "텍스트 색상을 지정합니다.",
     },
     size: {
