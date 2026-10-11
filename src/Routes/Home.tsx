@@ -13,7 +13,6 @@ import {
   SlideItem,
   UITable,
   UIBadge,
-  Badges,
   UIAccordion,
   UIDivider,
   UIScroll,
@@ -41,13 +40,6 @@ const projectFilters: { value: ProjectFilter; label: string }[] = [
   { value: "publishing", label: "퍼블리싱" },
   { value: "design", label: "디자인" },
   { value: "personal", label: "개인 프로젝트" },
-];
-
-const skillGroups = [
-  { id: "development", number: "01", title: "DEVELOPMENT", icon: "⌨︎", tools: ["HTML", "SCSS", "JavaScript", "React", "TypeScript", "CSS Modules", "Storybook"] },
-  { id: "design", number: "02", title: "UI DESIGN", icon: "✎", tools: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Responsive UI", "CSS Animation"] },
-  { id: "workflow", number: "03", title: "WORKFLOW", icon: "⚙︎", tools: ["Git", "GitHub", "VS Code", "Cursor", "Vite", "Swiper", "Storybook"] },
-  { id: "ai", number: "04", title: "AI WORKFLOW", icon: "✦", tools: ["ChatGPT", "Codex", "Figma MCP", "AI-assisted Coding"] },
 ];
 
 function Home() {
@@ -217,12 +209,12 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#CMS</UIBadge>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#적응형</UIBadge>
             <UIBadge size="md" variant="line">#Webview</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -327,12 +319,12 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#vite</UIBadge>
             <UIBadge size="md" variant="line">#storybook</UIBadge>
             <UIBadge size="md" variant="line">#React UI</UIBadge>
             <UIBadge size="md" variant="line">#Webview</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -418,12 +410,12 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#접근성</UIBadge>
             <UIBadge size="md" variant="line">#React</UIBadge>
             <UIBadge size="md" variant="line">#다크모드</UIBadge>
             <UIBadge size="md" variant="line">#APP구축</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -506,11 +498,11 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#디버깅</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
             <UIBadge size="md" variant="line">#다크모드</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -592,11 +584,11 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#Gulp</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -645,12 +637,12 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -698,12 +690,12 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -751,12 +743,12 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#반응형</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#구축</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -804,12 +796,12 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#적응형</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -857,13 +849,13 @@ function Home() {
               </UITable.Tbody>
             </UITable.Table>
           </UITable.Default>
-          <Badges>
+          <UIBadge.Group>
             <UIBadge size="md" variant="line">#유지보수</UIBadge>
             <UIBadge size="md" variant="line">#Git</UIBadge>
             <UIBadge size="md" variant="line">#재구축</UIBadge>
             <UIBadge size="md" variant="line">#부트스트랩</UIBadge>
             <UIBadge size="md" variant="line">#gulp</UIBadge>
-          </Badges>
+          </UIBadge.Group>
         </SlideItem>
       ),
     },
@@ -980,7 +972,7 @@ function Home() {
 
 
 
-      {/* <UIContent bgColor="gray" bgPattern="check">
+      <UIContent bgColor="gray" bgPattern="check">
         <UIBox.Article variant="content" aria-labelledby="skills-title">
           <UIBox.Div>
             <UIText.Header size="lg" role="heading" aria-level={2} id="skills-title" className="mb-6">
@@ -991,25 +983,82 @@ function Home() {
             </UIText.Basic>
           </UIBox.Div>
           <UIBox.Div display="grid" columns={2}>
-            {skillGroups.map((group) => (
-              <UIBox.Div key={group.id} variant="outlineCard">
-                <UIBox.Div variant="archiveTop">
-                  <UIBox.Div as="span" variant="archiveIcon">
-                    <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">{group.icon}</UIText.Basic>
-                  </UIBox.Div>
-                  <UIText.Basic variant="archiveLabel" weight="bold">{group.number} /</UIText.Basic>
+            <UIBox.Div variant="outlineCard">
+              <UIBox.Div variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon">
+                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">⌨︎</UIText.Basic>
                 </UIBox.Div>
-                <UIText.Basic as="h3" font="tenada">{group.title}</UIText.Basic>
-                <Badges variant="wrap">
-                  {group.tools.map((tool) => (
-                    <UIBadge key={tool} size="md" bgColor="transparent">{tool}</UIBadge>
-                  ))}
-                </Badges>
+                <UIText.Basic variant="archiveLabel" weight="bold">01 /</UIText.Basic>
               </UIBox.Div>
-            ))}
+              <UIText.Basic as="h3" font="tenada">Markup &amp; Accessibility</UIText.Basic>
+              <UIText.Basic as="p" size="xs">웹 표준과 접근성을 고려한 시맨틱 마크업</UIText.Basic>
+              <UIBadge.Group variant="wrap">
+                <UIBadge variant="solid" size="md" bgColor="white">HTML5</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">SCSS</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Semantic HTML</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Web Accessibility</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Cross-Browser</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Media Query</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">CSS Modules</UIBadge>
+              </UIBadge.Group>
+            </UIBox.Div>
+            <UIBox.Div variant="outlineCard">
+              <UIBox.Div variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon">
+                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">✎</UIText.Basic>
+                </UIBox.Div>
+                <UIText.Basic variant="archiveLabel" weight="bold">02 /</UIText.Basic>
+              </UIBox.Div>
+              <UIText.Basic as="h3" font="tenada">Frontend Development</UIText.Basic>
+              <UIText.Basic as="p" size="xs">React 기반 컴포넌트 개발</UIText.Basic>
+              <UIBadge.Group variant="wrap">
+                <UIBadge variant="solid" size="md" bgColor="white">JavaScript ES6+</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">TypeScript</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">React</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">React Router</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Swiper</UIBadge>
+              </UIBadge.Group>
+            </UIBox.Div>
+            <UIBox.Div variant="outlineCard">
+              <UIBox.Div variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon">
+                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">⚙︎</UIText.Basic>
+                </UIBox.Div>
+                <UIText.Basic variant="archiveLabel" weight="bold">03 /</UIText.Basic>
+              </UIBox.Div>
+              <UIText.Basic as="h3" font="tenada">UI Implementation</UIText.Basic>
+              <UIText.Basic as="p" size="xs">반응형 웹과 인터랙티브 UI 구현</UIText.Basic>
+              <UIBadge.Group variant="wrap">
+                <UIBadge variant="solid" size="md" bgColor="white">Responsive Web</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Component UI</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">CSS Animation</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">WebView</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Dark / Light Mode</UIBadge>
+              </UIBadge.Group>
+            </UIBox.Div>
+            <UIBox.Div variant="outlineCard">
+              <UIBox.Div variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon">
+                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">✦</UIText.Basic>
+                </UIBox.Div>
+                <UIText.Basic variant="archiveLabel" weight="bold">04 /</UIText.Basic>
+              </UIBox.Div>
+              <UIText.Basic as="h3" font="tenada">Design &amp; Workflow</UIText.Basic>
+              <UIText.Basic as="p" size="xs">디자인부터 개발·협업까지</UIText.Basic>
+              <UIBadge.Group variant="wrap">
+                <UIBadge variant="solid" size="md" bgColor="white">Figma</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Adobe XD</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Photoshop</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Illustrator</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Git / GitHub</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Storybook</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Vite</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">AI-assisted Coding</UIBadge>
+              </UIBadge.Group>
+            </UIBox.Div>
           </UIBox.Div>
         </UIBox.Article>
-      </UIContent> */}
+      </UIContent>
 
       <UIContent bgColor="blue" bgPattern="waveyellow">
         <UIBox.Article as="article" align="center">

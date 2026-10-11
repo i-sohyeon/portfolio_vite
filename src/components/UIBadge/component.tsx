@@ -1,8 +1,8 @@
 import React from "react";
-import type { UIBadgeProps } from "./types";
+import type { UIBadgeProps, UIBadgeGroupProps } from "./types";
 import styles from "./styles.module.scss";
 
-export const UIBadge: React.FC<UIBadgeProps> = ({
+export const Badge: React.FC<UIBadgeProps> = ({
   variant,
   bgColor,
   children,
@@ -13,7 +13,7 @@ export const UIBadge: React.FC<UIBadgeProps> = ({
   const classes = [
     styles["ui-badge"],
     styles[`ui-badge-${bgColor}`],
-    styles[`ui-badge-${color}`],
+    styles[`ui-badge-color-${color}`],
     styles[`ui-badge-${size}`],
     styles[`ui-badge-${variant}`],
 
@@ -25,3 +25,16 @@ export const UIBadge: React.FC<UIBadgeProps> = ({
 
   return <span className={classes}>{children}</span>;
 };
+
+export const Group = ({ children, className, variant = "project", ...props }: UIBadgeGroupProps) => {
+  const classes = [
+    styles["ui-badge-group"],
+    styles[`ui-badge-group-${variant}`],
+    className,
+  ].filter(Boolean).join(" ");
+
+  return <div {...props} className={classes}>{children}</div>;
+};
+
+Group.displayName = "UIBadge.Group";
+

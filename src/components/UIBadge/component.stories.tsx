@@ -4,6 +4,7 @@ import { UIBadge } from "./index";
 const meta: Meta<typeof UIBadge> = {
   title: "Components/UIBadge",
   component: UIBadge,
+  render: (args) => <UIBadge {...args} />,
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
