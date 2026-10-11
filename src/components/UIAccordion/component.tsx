@@ -38,7 +38,6 @@ export const Line: React.FC<UIAccordionProps> = ({
             {title}
           </span>
           <UIIcon variant="arrow-down" size="sm" />
-          {/* <img src="../../assets/images/icons/ico_arrow_bk.png" alt=""/> */}
         </button>
       </h3>
       <div
