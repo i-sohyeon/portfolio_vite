@@ -71,8 +71,9 @@ export const SlideItem = ({
 
   return (
     <div className={`${styles.slideItem} ${classes}`}>
-      <button onClick={onClick}>
-        <img src={imgSrc} alt="" /> 
+      <button type="button" onClick={onClick} aria-label={`${title} 자세히 보기`}>
+        <img src={imgSrc} alt="" />
+        <span className={styles["slide-detail-label"]} aria-hidden="true">자세히 보기</span>
       </button>
       
       <h3 className={`${colorClass} ${classes}`}>{title}</h3>
