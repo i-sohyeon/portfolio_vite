@@ -1,18 +1,6 @@
 @use "../styles/utils/function" as *;
 @use "../styles/utils/variables" as *;
 
-.skills-icon {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: rem(36);
-  height: rem(36);
-  border-radius: 50%;
-  background: $main-black;
-  color: $main-white;
-  font-size: rem(24);
-}
-
 .project-empty {
   padding: rem(40) 0;
   font-size: rem(14);

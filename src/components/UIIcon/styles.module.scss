@@ -33,6 +33,23 @@
     background-size: 100% 100%;
   }
 
+  &-html {
+    background-image: url("../../assets/images/icons/ico_html.svg");
+    background-size: 100% 100%;
+  }
+  &-dev {
+    background-image: url("../../assets/images/icons/ico_dev.svg");
+    background-size: 100% 100%;
+  }
+  &-motion {
+    background-image: url("../../assets/images/icons/ico_motion.svg");
+    background-size: 100% 100%;
+  }
+  &-tool {
+    background-image: url("../../assets/images/icons/ico_tool.svg");
+    background-size: 100% 100%;
+  }
+
   /** size **/
   &-sm {
     width: rem(20);

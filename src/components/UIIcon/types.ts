@@ -1,4 +1,4 @@
-export type UIIconVariant = "github" | "tistory" | "codepen"  | "mail" | "arrow-down";
+export type UIIconVariant = "github" | "tistory" | "codepen"  | "mail" | "arrow-down" | "html" | "dev" | "motion" | "tool";
 export type UIIconSize = "sm" | "md" | "lg";
 export type UIIconColor = "wht";
 

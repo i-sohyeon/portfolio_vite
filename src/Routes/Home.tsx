@@ -986,7 +986,7 @@ function Home() {
             <UIBox.Div variant="outlineCard">
               <UIBox.Div variant="archiveTop">
                 <UIBox.Div as="span" variant="archiveIcon">
-                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">⌨︎</UIText.Basic>
+                  <UIIcon variant="html" size="lg" />
                 </UIBox.Div>
                 <UIText.Basic variant="archiveLabel" weight="bold">01 /</UIText.Basic>
               </UIBox.Div>
@@ -1005,32 +1005,19 @@ function Home() {
             <UIBox.Div variant="outlineCard">
               <UIBox.Div variant="archiveTop">
                 <UIBox.Div as="span" variant="archiveIcon">
-                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">✎</UIText.Basic>
+                  <UIIcon variant="dev" size="lg" />
                 </UIBox.Div>
                 <UIText.Basic variant="archiveLabel" weight="bold">02 /</UIText.Basic>
               </UIBox.Div>
-              <UIText.Basic as="h3" font="tenada">Frontend Development</UIText.Basic>
-              <UIText.Basic as="p" size="xs">React 기반 컴포넌트 개발</UIText.Basic>
+              <UIText.Basic as="h3" font="tenada">Frontend &amp; UI Development</UIText.Basic>
+              <UIText.Basic as="p" size="xs">React 기반 컴포넌트 및 인터랙티브 UI 구현</UIText.Basic>
               <UIBadge.Group variant="wrap">
                 <UIBadge variant="solid" size="md" bgColor="white">JavaScript ES6+</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">TypeScript</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">React</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">React Router</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">Swiper</UIBadge>
-              </UIBadge.Group>
-            </UIBox.Div>
-            <UIBox.Div variant="outlineCard">
-              <UIBox.Div variant="archiveTop">
-                <UIBox.Div as="span" variant="archiveIcon">
-                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">⚙︎</UIText.Basic>
-                </UIBox.Div>
-                <UIText.Basic variant="archiveLabel" weight="bold">03 /</UIText.Basic>
-              </UIBox.Div>
-              <UIText.Basic as="h3" font="tenada">UI Implementation</UIText.Basic>
-              <UIText.Basic as="p" size="xs">반응형 웹과 인터랙티브 UI 구현</UIText.Basic>
-              <UIBadge.Group variant="wrap">
                 <UIBadge variant="solid" size="md" bgColor="white">Responsive Web</UIBadge>
-                <UIBadge variant="solid" size="md" bgColor="white">Component UI</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">CSS Animation</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">WebView</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">Dark / Light Mode</UIBadge>
@@ -1039,21 +1026,38 @@ function Home() {
             <UIBox.Div variant="outlineCard">
               <UIBox.Div variant="archiveTop">
                 <UIBox.Div as="span" variant="archiveIcon">
-                  <UIText.Basic className={styles["skills-icon"]} aria-hidden="true">✦</UIText.Basic>
+                  <UIIcon variant="motion" size="lg" />
                 </UIBox.Div>
-                <UIText.Basic variant="archiveLabel" weight="bold">04 /</UIText.Basic>
+                <UIText.Basic variant="archiveLabel" weight="bold">03 /</UIText.Basic>
               </UIBox.Div>
-              <UIText.Basic as="h3" font="tenada">Design &amp; Workflow</UIText.Basic>
-              <UIText.Basic as="p" size="xs">디자인부터 개발·협업까지</UIText.Basic>
+              <UIText.Basic as="h3" font="tenada">UI Design &amp; Systems</UIText.Basic>
+              <UIText.Basic as="p" size="xs">사용자 경험을 고려한 UI 디자인과 컴포넌트 설계</UIText.Basic>
               <UIBadge.Group variant="wrap">
                 <UIBadge variant="solid" size="md" bgColor="white">Figma</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">Adobe XD</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">Photoshop</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">Illustrator</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Design System</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">UI Components</UIBadge>
+              </UIBadge.Group>
+            </UIBox.Div>
+            <UIBox.Div variant="outlineCard">
+              <UIBox.Div variant="archiveTop">
+                <UIBox.Div as="span" variant="archiveIcon">
+                  <UIIcon variant="tool" size="lg" />
+                </UIBox.Div>
+                <UIText.Basic variant="archiveLabel" weight="bold">04 /</UIText.Basic>
+              </UIBox.Div>
+              <UIText.Basic as="h3" font="tenada">Workflow &amp; AI Tools</UIText.Basic>
+              <UIText.Basic as="p" size="xs">개발 협업 도구와 AI를 활용한 작업 효율화</UIText.Basic>
+              <UIBadge.Group variant="wrap">
                 <UIBadge variant="solid" size="md" bgColor="white">Git / GitHub</UIBadge>
-                <UIBadge variant="solid" size="md" bgColor="white">Storybook</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">VS Code</UIBadge>
                 <UIBadge variant="solid" size="md" bgColor="white">Vite</UIBadge>
-                <UIBadge variant="solid" size="md" bgColor="white">AI-assisted Coding</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Storybook</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Chat GPT</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Codex</UIBadge>
+                <UIBadge variant="solid" size="md" bgColor="white">Cursor</UIBadge>
               </UIBadge.Group>
             </UIBox.Div>
           </UIBox.Div>
