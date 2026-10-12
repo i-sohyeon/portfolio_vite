@@ -6,15 +6,27 @@
   align-items: center;
   gap: rem(16);
   position: fixed;
-  right: 0;
-  left: 0;
+  top: rem(16);
+  right: rem(24);
+  left: rem(24);
   z-index: 100;
   max-width: 1280px;
   margin: 0 auto;
   font-size: rem(28);
+  background-color: rgba(255, 255, 255, .85);
+  border: rem(1) solid rgba(255, 255, 255, .65);
+  border-radius: rem(100);
+  box-shadow: 0 rem(8) rem(32) rgba(22, 11, 67, .08);
 
-  &-md { padding: rem(36) rem(24); }
-  &-lg { padding: rem(40) rem(32); }
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    background-color: rgba(255, 255, 255, .45);
+
+    -webkit-backdrop-filter: blur(rem(16)) saturate(150%);
+    backdrop-filter: blur(rem(16)) saturate(150%);
+    }
+
+  &-md { padding: rem(16) rem(28); }
+  &-lg { padding: rem(20) rem(32); }
 
   .logo a {
     font-family: "Bagel fat one";
@@ -27,10 +39,11 @@
     padding: rem(8) rem(16);
     font-size: rem(14);
     font-weight: 700;
-    color: $main-black;
-    background: $main-white;
+    color: $main-white;
     // border: rem(1) solid $main-black;
     border-radius: rem(28);
+    // background: $main-blue;
+    box-shadow: 0 rem(4) rem(16) rgba(100, 172, 255, .2);
     transition: transform .2s ease;
 
     flex-shrink: 0;
@@ -52,35 +65,115 @@
 
     place-items: center;
     }
+  .storybook-name {
+    color: $main-black;
+    }
   }
 
+.anchor-nav {
+  display: flex;
+  gap: rem(12);
+  padding: rem(6);
+  background: rgba(255, 255, 255, .4);
+  border: rem(1) solid rgba(255, 255, 255, .6);
+  border-radius: rem(40);
+  a {
+    padding: rem(8) rem(16);
+    font-size: rem(16);
+    white-space: nowrap;
+    color: $main-black;
+    border-radius: rem(28);
+    transition: background-color .2s ease;
+    &:hover { background: rgba(255, 255, 255, .6); }
+    &.active {font-weight: 700;  background: $main-white; }
+    }
+  }
 
+.ui-header a:focus-visible,
+.anchor-nav a:focus-visible {
+  outline: rem(3) solid $main-blue;
+  outline-offset: rem(3);
+  }
 
-
-
-
+@media (max-width: 1023px) {
+  .ui-header {
+    flex-wrap: nowrap;
+    gap: rem(8);
+    font-size: rem(24);
+    &-md, &-lg { padding: rem(12) rem(16); }
+    .logo { flex-shrink: 0; }
+    .storybook-link { padding: rem(8); font-size: rem(12); }
+  }
+  .anchor-nav {
+    min-width: 0;
+    gap: rem(4);
+    a { padding: rem(8); font-size: rem(14); text-align: center; }
+  }
+}
 
 @media (max-width: 767px) {
   .ui-header {
-    &-md { padding: rem(24); }
-    &-lg { padding: rem(36) rem(28); }
+    top: rem(10);
+    right: rem(12);
+    left: rem(12);
+    font-size: rem(24);
+    .storybook-link { padding: rem(8) rem(12); font-size: rem(12); }
+    .storybook-name {display: none;}
     }
-  .storybook-link {
-    gap: rem(8);
-    padding: rem(6) rem(12);
-    font-size: rem(14);
-    background: none !important;
+  .anchor-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: auto;
+    gap: 0;
+    padding: rem(8) rem(8) calc(rem(8) + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, .95);
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 rem(-4) rem(16) rgba(22, 11, 67, .04);
+    overflow: visible;
+    @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      background: rgba(255, 255, 255, .8);
+      -webkit-backdrop-filter: blur(rem(12)) saturate(130%);
+      backdrop-filter: blur(rem(12)) saturate(130%);
+      }
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      min-width: 0;
+      min-height: rem(44);
+      padding: rem(6) rem(4) rem(12);
+      font-size: rem(12);
+      white-space: normal;
+      border-radius: rem(4);
+      &:hover { background: rgba(22, 11, 67, .04); }
+      &.active {
+        color: $main-blue;
+        background: transparent;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: rem(3);
+          left: 50%;
+          width: rem(4);
+          height: rem(4);
+          background: currentColor;
+          border-radius: 50%;
+          transform: translateX(-50%);
+          }
+        }
+      }
     }
-  .storybook-name { display: none; }
-
+  :global(body):has(.ui-header) {
+    padding-bottom: calc(rem(72) + env(safe-area-inset-bottom, 0px));
+    }
   }
 
-@media (max-width: 479px) {
-  .ui-header {
-    gap: rem(8);
-    font-size: rem(24);
-
-    &-md { padding: rem(20) rem(16); }
-    }
-
+@media (prefers-reduced-motion: reduce) {
+  .anchor-nav a, .ui-header .storybook-link { transition: none; }
   }

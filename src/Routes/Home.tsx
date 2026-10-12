@@ -867,7 +867,7 @@ function Home() {
     <>
       <UIHeader size="md">S.H.LEE</UIHeader>
 
-      <UIContent bgColor="gray" bgPattern="check">
+      <UIContent id="overview" bgColor="gray" bgPattern="check" style={{ scrollMarginTop: "0px" }}>
         <UIBox.Article align="center" style={{ padding: "240px 0 220px 0" }}>
           <UIText.Header size="xl" align="center" variant="mainTitle" as="h1">
             UI &middot; UX
@@ -972,7 +972,7 @@ function Home() {
 
 
 
-      <UIContent bgColor="gray" bgPattern="check">
+      <UIContent id="skills" style={{ scrollMarginTop: "140px" }} bgColor="gray" bgPattern="check">
         <UIBox.Article variant="content" aria-labelledby="skills-title">
           <UIBox.Div>
             <UIText.Header size="lg" role="heading" aria-level={2} id="skills-title" className="mb-6">
@@ -1064,9 +1064,9 @@ function Home() {
         </UIBox.Article>
       </UIContent>
 
-      <UIContent bgColor="blue" bgPattern="waveyellow">
+      <UIContent id="career" bgColor="blue" bgPattern="waveyellow" style={{ scrollMarginTop: "140px" }}>
         <UIBox.Article as="article" align="center">
-          <UIText.Header size="lg" align="left">경력 CAREER</UIText.Header>
+          <UIText.Header size="lg" align="left">CAREER</UIText.Header>
           <UIBox.Div variant="flex" jContent="space-between" aItems="middle" className="pt-0">
             <UIBanner.Wrapper className="mr-5 mb-4" animateOnScroll>
               <UIBanner.List
@@ -1128,9 +1128,10 @@ function Home() {
       </UIContent>
 
       <UIContent
+        id="projects"
         bgColor="gray"
         bgPattern="check"
-        style={{ overflowX: "hidden" }}>
+        style={{ overflowX: "hidden", scrollMarginTop: "140px" }}>
         <UIBox.Article variant="content">
           <UIText.Header variant="h3" size="lg">
             PROJECT DETAILS
@@ -1168,7 +1169,7 @@ function Home() {
       </UIContent>
 
 
-      <UIContent bgColor="pink">
+      <UIContent id="archive" bgColor="pink" style={{ scrollMarginTop: "140px" }}>
         <UIBox.Article variant="content">
           <UIText.Header variant="h3" size="lg" role="heading" aria-level={2}>ARCHIVE</UIText.Header>
           <UIBox.Div display="grid" columns={3}>
