@@ -169,7 +169,7 @@
         }
       }
     }
-  :global(body):has(.ui-header) {
+  :global(body):has(> .anchor-nav) {
     padding-bottom: calc(rem(72) + env(safe-area-inset-bottom, 0px));
     }
   }
@@ -177,3 +177,26 @@
 @media (prefers-reduced-motion: reduce) {
   .anchor-nav a, .ui-header .storybook-link { transition: none; }
   }
+
+// 서브페이지 헤더 (어두운 페이지)
+.ui-header-wht {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-color: rgba(255, 255, 255, .12);
+  box-shadow: 0 rem(4) rem(20) rgba(0, 0, 0, .12);
+
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    background-color: rgba(35, 31, 79, .85);
+    -webkit-backdrop-filter: blur(rem(16));
+    backdrop-filter: blur(rem(16));
+  }
+
+  .logo a,
+  .storybook-name { color: #e4e2f2; }
+
+  .storybook-link {
+    background: rgba(255, 255, 255, .06);
+    box-shadow: none;
+  }
+
+
+}

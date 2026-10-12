@@ -15,6 +15,7 @@ export const UIHeader: React.FC<UIHeaderProps> = ({
 }) => {
 
   const location = useLocation();
+  const showNavigation = location.pathname === "/";
   const [mobile, setMobile] = useState(() => window.matchMedia("(max-width: 767px)").matches);
 
   useEffect(() => {
@@ -81,7 +82,7 @@ export const UIHeader: React.FC<UIHeaderProps> = ({
       <h1 className={styles.logo}>
         <Link to="/">{children}</Link>
       </h1>
-      {!mobile && navigation}
+      {showNavigation && !mobile && navigation}
 
       <a
         href="https://main--6a1c0e1b70232ec461f8711c.chromatic.com/"
@@ -94,7 +95,7 @@ export const UIHeader: React.FC<UIHeaderProps> = ({
         <span className={styles["storybook-name"]}>스토리북 보기<span className="sr-only"> (새 창)</span></span>
       </a>
     </UIHeader>
-      {mobile && createPortal(navigation, document.body)}
+      {showNavigation && mobile && createPortal(navigation, document.body)}
     </>
   );
 };
