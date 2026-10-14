@@ -867,7 +867,7 @@ function Home() {
     <>
       <UIHeader size="md">S.H.LEE</UIHeader>
 
-      <UIContent id="overview" bgColor="gray" bgPattern="check" style={{ scrollMarginTop: "0px" }}>
+      <UIContent id="overview" bgColor="gray" bgPattern="check">
         <UIBox.Article align="center" style={{ padding: "240px 0 220px 0" }}>
           <UIText.Header size="xl" align="center" variant="mainTitle" as="h1">
             UI &middot; UX
@@ -972,7 +972,7 @@ function Home() {
 
 
 
-      <UIContent id="skills" style={{ scrollMarginTop: "140px" }} bgColor="gray" bgPattern="check">
+      <UIContent id="skills" bgColor="gray" bgPattern="check">
         <UIBox.Article variant="content" aria-labelledby="skills-title">
           <UIBox.Div>
             <UIText.Header size="lg" role="heading" aria-level={2} id="skills-title" className="mb-6">
@@ -1064,7 +1064,7 @@ function Home() {
         </UIBox.Article>
       </UIContent>
 
-      <UIContent id="career" bgColor="blue" bgPattern="waveyellow" style={{ scrollMarginTop: "140px" }}>
+      <UIContent id="career" bgColor="blue" bgPattern="waveyellow">
         <UIBox.Article as="article" align="center">
           <UIText.Header size="lg" align="left">CAREER</UIText.Header>
           <UIBox.Div variant="flex" jContent="space-between" aItems="middle" className="pt-0">
@@ -1131,7 +1131,7 @@ function Home() {
         id="projects"
         bgColor="gray"
         bgPattern="check"
-        style={{ overflowX: "hidden", scrollMarginTop: "140px" }}>
+        style={{ overflowX: "hidden" }}>
         <UIBox.Article variant="content">
           <UIText.Header variant="h3" size="lg">
             PROJECT DETAILS
@@ -1169,7 +1169,7 @@ function Home() {
       </UIContent>
 
 
-      <UIContent id="archive" bgColor="pink" style={{ scrollMarginTop: "140px" }}>
+      <UIContent id="archive" bgColor="pink">
         <UIBox.Article variant="content">
           <UIText.Header variant="h3" size="lg" role="heading" aria-level={2}>ARCHIVE</UIText.Header>
           <UIBox.Div display="grid" columns={3}>

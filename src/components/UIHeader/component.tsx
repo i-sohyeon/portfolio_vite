@@ -35,7 +35,7 @@ export const UIHeader: React.FC<UIHeaderProps> = ({
 
   useEffect(() => {
     const target = document.getElementById(location.hash.slice(1));
-    if (target) target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    if (target) target.scrollIntoView({ block: "start", inline: "nearest", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   }, [location.pathname, location.hash]);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export const UIHeader: React.FC<UIHeaderProps> = ({
             className={activeSection === id ? styles.active : undefined}
             aria-current={activeSection === id ? "location" : undefined}
             onClick={() => {
-              if (location.hash === `#${id}`) document.getElementById(id)?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+              if (location.hash === `#${id}`) document.getElementById(id)?.scrollIntoView({ block: "start", inline: "nearest", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
             }}>{label}</Link>
         ))}
       </nav>
