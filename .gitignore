@@ -25,3 +25,8 @@ dist-ssr
 
 *storybook.log
 storybook-static
+
+# Local environment variables and deployment credentials
+.env
+.env.*
+!.env.example

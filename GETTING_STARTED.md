@@ -176,19 +176,28 @@ npm run deploy-storybook
 npm install --save-dev chromatic
 ```
 
-### 5. https://www.chromatic.com/ 접속 후 git 아이디로 가입 필요
-`Add Project`를 선택하면
+### 5. Chromatic 토큰 설정 및 배포
 
+Chromatic에서 기존 프로젝트의 토큰을 재발급하고 기존 토큰은 폐기하세요.
+프로젝트 루트의 `.env.local`에 새 토큰을 입력합니다.
+파일이 없다면 `.env.example`을 복사해 만드세요.
+
+```dotenv
+CHROMATIC_PROJECT_TOKEN=여기에_재발급받은_토큰_입력
 ```
-Project Token
-chpt_xxxxxxxxxxxxxxxxxx
-```
-과 같은 프로젝트 토큰을 받음
+
+`.env.local`은 Git에서 제외됩니다. 실제 토큰을 코드, 문서, 커맨드 인자에 적지 마세요.
+브라우저에 노출되는 `VITE_` 접두사도 사용하지 않습니다.
+
+Node.js 22 이상에서 다음 명령을 실행하면 로컬 환경변수를 읽어 스토리북을 배포합니다.
 
 ```bash
-npx chromatic --project-token=발급받은토큰 번호
+npm run chromatic
 ```
-커맨드 창에 복붙
+
+CI에서는 `CHROMATIC_PROJECT_TOKEN`을 GitHub Actions Secrets 등으로 주입합니다.
+Git 기록에 남은 토큰은 파일 수정만으로 무효화되지 않으므로 반드시 재발급하세요.
+포트폴리오 배포 명령 `npm run deploy`는 이 설정과 별개입니다.
 
 배포가 완료되면 아래 주소에서 확인할 수 있습니다.
 

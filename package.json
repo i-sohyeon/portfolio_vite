@@ -12,7 +12,7 @@
     "build-storybook": "storybook build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "chromatic": "npx chromatic --project-token=chpt_46057afabea842a"
+    "chromatic": "node --env-file-if-exists=.env.local node_modules/chromatic/dist/bin.cjs"
   },
   "dependencies": {
     "react": "^19.2.6",
