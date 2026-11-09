@@ -609,6 +609,49 @@ function Home() {
                   <div>
                     <img src={`${import.meta.env.BASE_URL}assets/images/swiper/spokids_cont.webp`} alt="" />
                   </div>
+                  <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="h3" weight="bold">✅ UI/UX 디자인 및 애플리케이션 구현</UIText.Basic>
+                  <UIText.Basic size="xs" className={styles["project-popup-link"]} align="left" as="p">
+                    웹주소: <a href="https://sphokidz-mu.vercel.app/" target="_blank" rel="noopener noreferrer">https://sphokidz-mu.vercel.app/</a>
+                  </UIText.Basic>
+                  <UIText.Basic size="xs" className="mb-6 pl-2" align="left" as="p" weight="bold">
+                    * 본 웹 애플리케이션은 2026년에 React로 다시 구현한 포트폴리오용 재현본이며, 실제 서비스가 아닙니다.
+                  </UIText.Basic>
+                  <UITextList.Nested
+                    color="black"
+                    align="left"
+                    nestedItems={[
+                      {
+                        id: "spokids-overview",
+                        name: "프로젝트 개요",
+                        children: [
+                          { id: "spokids-photo", name: "- 아이들이 원하는 캐릭터를 선택하고 함께 사진을 촬영할 수 있는 포토 앱" },
+                          { id: "spokids-experience", name: "- 어린이의 호기심과 상상력을 자극하는 친근하고 즐거운 UI/UX 디자인" },
+                        ],
+                      },
+                      {
+                        id: "spokids-design",
+                        name: "UI/UX 디자인",
+                        children: [
+                          { id: "spokids-design-period", name: "- 원본 UI/UX 디자인 작업기간: 2021.12 ~ 2022.04" },
+                          { id: "spokids-design-tools", name: "- 원본 디자인 사용 툴: XD · illustrator" },
+                          { id: "spokids-color", name: <>- 창의성과 상상력을 표현하기 위해 <strong>보라색을 메인 컬러로 선정</strong></> },
+                          { id: "spokids-illustration", name: "- 아이들의 흥미와 몰입도를 높이기 위한 다채로운 일러스트 요소 활용" },
+                          { id: "spokids-interface", name: "- 어린이의 눈높이를 고려한 직관적인 화면 구성 및 인터페이스 설계" },
+                          { id: "spokids-character", name: "- 캐릭터와 함께하는 즐거운 촬영 경험을 시각적으로 표현" },
+                        ],
+                      },
+                      {
+                        id: "spokids-ai",
+                        name: "AI 활용 및 프로젝트 확장",
+                        children: [
+                          { id: "spokids-personal", name: "- 재직 당시 직접 작업한 UI/UX 디자인을 기반으로 개인 프로젝트 확장" },
+                          { id: "spokids-claude", name: "- 2026년 Claude AI를 활용하여 기존 디자인을 React 기반 웹 애플리케이션으로 재현" },
+                          { id: "spokids-guide", name: "- 컬러, 타이포그래피, 공통 UI 컴포넌트 등 디자인 가이드 구축" },
+                          { id: "spokids-system", name: "- 일관된 UI 구현을 위한 디자인 요소 체계화" },
+                        ],
+                      },
+                    ]}
+                  />
               </div>
             )
           }
@@ -619,7 +662,7 @@ function Home() {
               <UITable.Tbody>
                 <UITable.Tr>
                   <UITable.Th scope="row">프로젝트 기간</UITable.Th>
-                  <UITable.Td>2021. 01. ~ 2022. 04</UITable.Td>
+                  <UITable.Td>2021. 12. ~ 2022. 04</UITable.Td>
                 </UITable.Tr>
                 <UITable.Tr>
                   <UITable.Th scope="row">참여도</UITable.Th>
@@ -637,10 +680,9 @@ function Home() {
             </UITable.Table>
           </UITable.Default>
           <UIBadge.Group>
-            <UIBadge size="md" variant="line" color="white">#반응형</UIBadge>
-            <UIBadge size="md" variant="line" color="white">#Git</UIBadge>
-            <UIBadge size="md" variant="line" color="white">#구축</UIBadge>
-            <UIBadge size="md" variant="line" color="white">#gulp</UIBadge>
+            <UIBadge size="md" variant="line">#UI&middot;UX DESIGN</UIBadge>
+            <UIBadge size="md" variant="line">#XD</UIBadge>
+            <UIBadge size="md" variant="line">#리뉴얼디자인</UIBadge>
           </UIBadge.Group>
         </SlideItem>
       ),
@@ -917,6 +959,14 @@ function Home() {
   const filteredProjects = projects.filter(
     (project) => activeCategory === "all" || project.categories.includes(activeCategory)
   );
+  // 탭마다 해당 카테고리 프로젝트 개수
+  const projectFilterItems = projectFilters.map((filter) => ({
+    ...filter,
+    count:
+      filter.value === "all"
+        ? projects.length
+        : projects.filter((project) => project.categories.includes(filter.value as ProjectCategory)).length,
+  }));
   return (
     <>
       <UIHeader size="md">S.H.LEE</UIHeader>
@@ -1193,7 +1243,7 @@ function Home() {
           </UIText.Header>
 
           <UITab.Filter<ProjectFilter>
-            items={projectFilters}
+            items={projectFilterItems}
             value={activeCategory}
             onChange={setActiveCategory}
             aria-label="프로젝트 카테고리"

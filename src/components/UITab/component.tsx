@@ -24,6 +24,13 @@ export function Filter<T extends string>({
           onClick={() => onChange(item.value)}
         >
           {item.label}
+          {item.count !== undefined && (
+            <span className={styles["ui-tab-count"]}>
+              <span className={styles["ui-tab-sr-only"]}> (</span>
+              {item.count}
+              <span className={styles["ui-tab-sr-only"]}>개)</span>
+            </span>
+          )}
         </button>
       ))}
     </div>

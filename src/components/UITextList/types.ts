@@ -18,7 +18,7 @@ export interface UITextListCheckProps
 
 export interface NestedItem {
   id: number | string;
-  name: string;
+  name: React.ReactNode;
   children?: NestedItem[];
 }
 

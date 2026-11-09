@@ -6,3 +6,11 @@
   font-size: rem(14);
   color: $main-black;
   }
+
+.project-popup-link {
+  margin-bottom: rem(8);
+  padding: rem(16);
+  background-color: #f1f1f1;
+  border-radius: rem(12);
+  overflow-wrap: anywhere;
+}

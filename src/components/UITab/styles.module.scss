@@ -38,6 +38,31 @@
     }
   }
 
+// 탭 옆 콘텐츠 개수
+.ui-tab-count {
+  display: inline-block;
+  margin-left: rem(6);
+  font-size: 0.8em;
+  font-weight: 600;
+  opacity: 0.5;
+  }
+
+.ui-tab-button-active .ui-tab-count,
+.ui-tab-button:hover .ui-tab-count {
+  opacity: 0.8;
+  }
+
+// 화면에는 숨기고 스크린리더에만 읽힘 ("퍼블리싱 (7개)")
+.ui-tab-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  }
+
 
 @media (max-width: 767px) {
   .ui-tab {
@@ -52,7 +77,17 @@
   }
 
 @media (max-width: 479px) {
+  .ui-tab {
+    padding: rem(6) rem(8);
+    }
+
   .ui-tab-button {
-    padding: rem(4) rem(8);
+    margin-right: rem(2);
+    padding: rem(4) rem(6);
+    }
+
+  // 개수가 붙어도 한 줄에 들어가도록 간격을 줄임
+  .ui-tab-count {
+    margin-left: rem(3);
     }
   }
