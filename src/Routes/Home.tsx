@@ -84,7 +84,7 @@ function Home() {
           title="현대카드 web/app 운영"
           titleColor="black"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hyundaicard.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hyundaicard.webp`}
           bgColor="gray"
           onClick={() =>
             handleOpenPopup(
@@ -98,7 +98,7 @@ function Home() {
                     <UIBox.Div className="mt-4">
                         <UIBox.Scroll 
                           href="https://www.hyundaicard.com/koreanair/event/event_2512.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_koreanair_year-end.png`} className="mt-5">
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_koreanair_year-end.webp`} className="mt-5">
                         </UIBox.Scroll>
                         <UIBox.Div className="pl-4">
                           <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 대한항공카드 이벤트 페이지</UIText.Basic>
@@ -110,7 +110,7 @@ function Home() {
                       <UIBox.Div className="mt-4">
                         <UIBox.Scroll 
                           href="https://hyundaicard.com/costco/m/html/costco_cashBack2510_case03_v1.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco_2.png`} className="mt-5">
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco_2.webp`} className="mt-5">
                         </UIBox.Scroll>
                         <UIBox.Div className="pl-4">
                           <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
@@ -122,7 +122,7 @@ function Home() {
                       <UIBox.Div className="mt-4">
                         <UIBox.Scroll 
                           href="https://www.hyundaicard.com/m/HCSP/M_koreanair_hk.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_hyundaiXkoreanair.png`} className=" mt-5">
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_hyundaiXkoreanair.webp`} className=" mt-5">
                         </UIBox.Scroll>
                         <UIBox.Div className="pl-4">
                           <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 현대카드 X 대한항공 이벤트 페이지</UIText.Basic>
@@ -134,7 +134,7 @@ function Home() {
                       <UIBox.Div className="mt-4">
                         <UIBox.Scroll 
                           href="https://www.hyundaicard.com/m/tribe/html/amex_centurion_newyork.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_tribe_event.png`} className="mt-5">
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_tribe_event.webp`} className="mt-5">
                         </UIBox.Scroll>
                         <UIBox.Div className="pl-4">
                           <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 tribe 이벤트 페이지</UIText.Basic>
@@ -147,7 +147,7 @@ function Home() {
                       <UIBox.Div className="mt-4">
                         <UIBox.Scroll 
                           href="https://www.hyundaicard.com/costco/m/html/costco_pyeongtaek1.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco.png`} className=" mt-5">
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_costco.webp`} className=" mt-5">
                         </UIBox.Scroll>
                         <UIBox.Div className="pl-4">
                           <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 코스트코 이벤트 페이지</UIText.Basic>
@@ -159,7 +159,7 @@ function Home() {
                       <UIBox.Div className="mt-4">
                         <UIBox.Scroll 
                           href="https://www.hyundaicard.com/emart/m/html/emart_event2501.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_emart.png`} className="mt-5">
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_emart.webp`} className="mt-5">
                         </UIBox.Scroll>
                         <UIBox.Div className="pl-4">
                           <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 이마트 이벤트 페이지</UIText.Basic>
@@ -172,7 +172,7 @@ function Home() {
                       <UIBox.Div className="mt-4">
                         <UIBox.Scroll 
                           href="https://www.hyundaicard.com/mdm/thepurple/m_dm_purple_2501.html"
-                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_the_purple.png`} className=" mt-5">
+                          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/hd_the_purple.webp`} className=" mt-5">
                         </UIBox.Scroll>
                         <UIBox.Div className="pl-4">
                           <UIText.Basic size="xs" className="mt-4" align="left" as="p" weight="bold">📂 the purple special offer</UIText.Basic>
@@ -227,12 +227,12 @@ function Home() {
           title="개인 포트폴리오"
           titleColor="black"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/07_content.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/07_content.webp`}
           bgColor="skyblue"
           onClick={() =>
             handleOpenPopup(
               <div>
-                <img src={`${import.meta.env.BASE_URL}assets/images/swiper/07_content.png`} alt="" />
+                <img src={`${import.meta.env.BASE_URL}assets/images/swiper/07_content.webp`} alt="" />
                 <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 포트폴리오 설명서 (accordion 컴포넌트 작업중입니다)</UIText.Basic>
                 <div className="pl-4 pr-4">
                   <UIAccordion.Line variant="line" id="portfolio-accessibility" title="1. 접근성 (Accessibility)">
@@ -337,14 +337,14 @@ function Home() {
           title="우리은행 won 뱅킹 재구축"
           titleColor="white"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/wooribank.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/wooribank.webp`}
           bgColor="navy"
           onClick={() =>
             handleOpenPopup(
               <div className="">
                 {/* 팝업에 나올 전용 내용 */}
                   <div>
-                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/wooribank.png`} alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/wooribank.webp`} alt="" />
                   </div>
                   <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 주요 업무 및 담당 역할</UIText.Basic>
                   <UITextList.Nested 
@@ -375,9 +375,7 @@ function Home() {
                           { id: 3-3, name: "- 웹접근성 표준을 준수한 마크업 및 시맨틱 구조 설계  프로젝트에서 웹접근성 인증 마크 획득에 기여" },
                           { id: 3-4, name: "- 웹 접근성 관련 이슈 대응(ios: voice over, aos: talk back)" },
                           { id: 3-5, name: "- 이벤트 페이지의 룰렛 돌리기, 복권 긁기, 출석체크 등 미니게임 UI를 주도적으로 구현하여 사용자 경험 강화" },
-                          { id: 3-6, name: "- SCSS 변수화·모듈화, 컴포넌트 가이드 정립으로 팀 내 퍼블리싱 가이드라인 수립에 기여" },
-                  
-                          
+                          { id: 3-6, name: "- SCSS 변수화·모듈화, 컴포넌트 가이드 정립으로 팀 내 퍼블리싱 가이드라인 수립에 기여" },        
                         ],
                       },
                     ]}  
@@ -427,14 +425,14 @@ function Home() {
           title="농협 올원뱅크 리뉴얼 구축"
           titleColor="black"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/nhbank.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/nhbank.webp`}
           bgColor="green"
           onClick={() =>
             handleOpenPopup(
               <div className="">
                 {/* 팝업에 나올 전용 내용 */}
                   <div>
-                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/nhbank.png`} alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/nhbank.webp`} alt="" />
                   </div>
                   <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 주요 업무 및 담당 역할</UIText.Basic>
                   <UITextList.Nested 
@@ -514,14 +512,14 @@ function Home() {
           title="KB국민은행 멤버십 플랫폼"
           titleColor="yellow"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/kbbank.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/kbbank.webp`}
           bgColor="brown"
           onClick={() =>
             handleOpenPopup(
               <div className="">
                 {/* 팝업에 나올 전용 내용 */}
                   <div>
-                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/kbbank.png`} alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/kbbank.webp`} alt="" />
                   </div>
                   <UIText.Basic size="md" className="mt-10 mb-6 pl-2" align="left" as="p" weight="bold">✅ 주요 업무 및 담당 역할</UIText.Basic>
                   <UITextList.Nested 
@@ -592,6 +590,62 @@ function Home() {
         </SlideItem>
       ),
     },
+
+    {
+      id: "shpokidz",
+      categories: ["design"],
+      content: (
+        <SlideItem
+          title="스포키즈(App)"
+          titleColor="white"
+          // content="Adaptive Page Publishing"
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/spokids_thumb.webp`}
+          bgColor="lavender"
+          onClick={() =>
+            handleOpenPopup(
+              <div className="">
+                {/* 팝업에 나올 전용 내용 */}
+              
+                  <div>
+                    <img src={`${import.meta.env.BASE_URL}assets/images/swiper/spokids_cont.webp`} alt="" />
+                  </div>
+              </div>
+            )
+          }
+          >
+          <UITable.Default className="mt-4" variant="type1" size="md" align="left">
+            <UITable.Table>
+              <UITable.Caption>문구야놀자 프로젝트 참여기간, 인원, 사용 툴, 주소</UITable.Caption>
+              <UITable.Tbody>
+                <UITable.Tr>
+                  <UITable.Th scope="row">프로젝트 기간</UITable.Th>
+                  <UITable.Td>2021. 01. ~ 2022. 04</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">참여도</UITable.Th>
+                  <UITable.Td>디자인 메인시안 100%</UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">사용 툴</UITable.Th>
+                  <UITable.Td>AdobeXD, illustrator, Zeplin </UITable.Td>
+                </UITable.Tr>
+                <UITable.Tr>
+                  <UITable.Th scope="row">디자인 가이드 보기</UITable.Th>
+                  <UITable.Td><a href="https://sphokidz-mu.vercel.app/" target="_blank" rel="noopener noreferrer">https://sphokidz-mu.vercel.app/</a></UITable.Td>
+                </UITable.Tr>
+              </UITable.Tbody>
+            </UITable.Table>
+          </UITable.Default>
+          <UIBadge.Group>
+            <UIBadge size="md" variant="line" color="white">#반응형</UIBadge>
+            <UIBadge size="md" variant="line" color="white">#Git</UIBadge>
+            <UIBadge size="md" variant="line" color="white">#구축</UIBadge>
+            <UIBadge size="md" variant="line" color="white">#gulp</UIBadge>
+          </UIBadge.Group>
+        </SlideItem>
+      ),
+    },
+
     {
       id: "playmoongu",
       categories: ["publishing"],
@@ -600,7 +654,7 @@ function Home() {
           title="문구야놀자(PC/Mobile)"
           titleColor="purple"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/playmoongu.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/playmoongu.webp`}
           bgColor="yellow"
           onClick={() =>
             handleOpenPopup(
@@ -654,7 +708,7 @@ function Home() {
           title="딸기콩(PC/Mobile)"
           titleColor="green"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/ddalgicong.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/ddalgicong.webp`}
           bgColor="red"
           onClick={() =>
             handleOpenPopup(
@@ -707,7 +761,7 @@ function Home() {
           title="인조이웍스 홈페이지"
           titleColor="black"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/enjoyworks.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/enjoyworks.webp`}
           bgColor="yellowgreen"
           onClick={() =>
             handleOpenPopup(
@@ -760,7 +814,7 @@ function Home() {
           title="굿뜨래페이"
           titleColor="white"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/goodtraepay.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/goodtraepay.webp`}
           bgColor="navy"
           onClick={() =>
             handleOpenPopup(
@@ -813,7 +867,7 @@ function Home() {
           title="딸기콩 관리자"
           titleColor="green"
           // content="Adaptive Page Publishing"
-          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/ddalgicong_admin.png`}
+          imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/ddalgicong_admin.webp`}
           bgColor="red"
           onClick={() =>
             handleOpenPopup(

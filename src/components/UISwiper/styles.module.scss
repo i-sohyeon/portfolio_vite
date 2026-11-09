@@ -200,6 +200,12 @@
 .ui-swiper-yellowgreen {background-color: #bbda41 !important;}
 .ui-swiper-skyblue {background-color: #3f89e6 !important;}
 
+.ui-swiper-lavender {
+  color: $main-white;
+  background-color: #7732b6 !important;
+  a { color: inherit; }
+}
+
 // UITitleColor
 .ui-title-color-purple {color: #5815a5;}
 .ui-title-color-green {color: #0c5b00;}

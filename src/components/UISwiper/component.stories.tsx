@@ -17,7 +17,7 @@ type Story = StoryObj<typeof UISwiper.Box>;
 export const Default: Story = {
   args: { variant: "type1", pagination: true },
   render: (args) => <div style={{ overflow: "hidden", padding: "8px 4px 24px" }}><UISwiper.Box {...args}>
-    {["hyundaicard.png", "wooribank.png", "nhbank.png"].map((image, index) => <SwiperSlide key={image}>
+    {["hyundaicard.webp", "wooribank.webp", "nhbank.webp"].map((image, index) => <SwiperSlide key={image}>
       <SlideItem title={`프로젝트 ${index + 1}`} titleColor="black" bgColor="gray" imgSrc={`${import.meta.env.BASE_URL}assets/images/swiper/${image}`}><p>프로젝트 카드 예시입니다.</p></SlideItem>
     </SwiperSlide>)}
   </UISwiper.Box></div>,
